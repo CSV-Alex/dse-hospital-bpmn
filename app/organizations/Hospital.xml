@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="ASCII"?>
+<organization:Organization xmlns:organization="http://documentation.bonitasoft.com/organization-xml-schema/1.1">
+  <customUserInfoDefinitions/>
+  <users>
+    <user userName="william.jobs">
+      <firstName>William</firstName>
+      <lastName>Jobs</lastName>
+      <title>Mr</title>
+      <jobTitle>Chief Executive Officer</jobTitle>
+      <personalData/>
+      <professionalData>
+        <email>william.jobs@acme.com</email>
+        <phoneNumber>484-302-5000</phoneNumber>
+        <faxNumber>484-302-0000</faxNumber>
+        <building>70</building>
+        <address>Renwick Drive</address>
+        <zipCode>19108</zipCode>
+        <city>Philadelphia</city>
+        <state>PA</state>
+        <country>United States</country>
+      </professionalData>
+      <metaDatas>
+        <metaData name="Skype ID"/>
+        <metaData name="Twitter"/>
+        <metaData name="Facebook"/>
+      </metaDatas>
+      <enabled>true</enabled>
+      <password encrypted="false">bpm</password>
+    </user>
+    <user userName="karla.quispe">
+      <firstName>Karla</firstName>
+      <lastName>Quispe</lastName>
+      <manager></manager>
+      <personalData/>
+      <professionalData/>
+      <password encrypted="false">123</password>
+      <customUserInfoValues/>
+    </user>
+    <user userName="angelo.quispe">
+      <firstName>Angelo</firstName>
+      <lastName>Quispe</lastName>
+      <personalData/>
+      <professionalData/>
+      <password encrypted="false">123</password>
+      <customUserInfoValues/>
+    </user>
+  </users>
+  <roles>
+    <role name="member">
+      <displayName>Member</displayName>
+      <description></description>
+    </role>
+    <role name="medicoTratante">
+      <displayName>MedicoTratante</displayName>
+    </role>
+  </roles>
+  <groups>
+    <group name="Hospital">
+      <displayName>Hospital</displayName>
+    </group>
+    <group name="enfermeria" parentPath="/Hospital">
+      <displayName>Enfermeria</displayName>
+    </group>
+    <group name="medicos" parentPath="/Hospital">
+      <displayName>Medicos</displayName>
+    </group>
+  </groups>
+  <memberships>
+    <membership>
+      <userName>william.jobs</userName>
+      <roleName>member</roleName>
+      <groupName>Hospital</groupName>
+    </membership>
+    <membership>
+      <userName>karla.quispe</userName>
+      <roleName>member</roleName>
+      <groupName>Hospital</groupName>
+    </membership>
+    <membership>
+      <userName>karla.quispe</userName>
+      <roleName>member</roleName>
+      <groupName>enfermeria</groupName>
+      <groupParentPath>/Hospital</groupParentPath>
+    </membership>
+    <membership>
+      <userName>angelo.quispe</userName>
+      <roleName>member</roleName>
+      <groupName>Hospital</groupName>
+    </membership>
+    <membership>
+      <userName>angelo.quispe</userName>
+      <roleName>medicoTratante</roleName>
+      <groupName>medicos</groupName>
+      <groupParentPath>/Hospital</groupParentPath>
+    </membership>
+  </memberships>
+</organization:Organization>
