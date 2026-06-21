@@ -44,6 +44,38 @@
       <password encrypted="false">123</password>
       <customUserInfoValues/>
     </user>
+    <user userName="nicolas.contrerin">
+      <firstName>Nicolas</firstName>
+      <lastName>Contreras</lastName>
+      <personalData/>
+      <professionalData/>
+      <password encrypted="false">bpm</password>
+      <customUserInfoValues/>
+    </user>
+    <user userName="miguel.quispe">
+      <firstName>Miguel</firstName>
+      <lastName>Quispe</lastName>
+      <personalData/>
+      <professionalData/>
+      <password encrypted="false">bpm</password>
+      <customUserInfoValues/>
+    </user>
+    <user userName="maria.quispe">
+      <firstName>Maria</firstName>
+      <lastName>Quispe</lastName>
+      <personalData/>
+      <professionalData/>
+      <password encrypted="false">bpm</password>
+      <customUserInfoValues/>
+    </user>
+    <user userName="mateo.quispe">
+      <firstName>Mateo</firstName>
+      <lastName>Quispe</lastName>
+      <personalData/>
+      <professionalData/>
+      <password encrypted="false">bpm</password>
+      <customUserInfoValues/>
+    </user>
   </users>
   <roles>
     <role name="member">
@@ -52,6 +84,12 @@
     </role>
     <role name="medicoTratante">
       <displayName>MedicoTratante</displayName>
+    </role>
+    <role name="operadorEquipos">
+      <displayName>Operador</displayName>
+    </role>
+    <role name="tecnicoEquipos">
+      <displayName>Tecnico</displayName>
     </role>
   </roles>
   <groups>
@@ -64,12 +102,19 @@
     <group name="medicos" parentPath="/Hospital">
       <displayName>Medicos</displayName>
     </group>
+    <group name="operadores" parentPath="/Hospital">
+      <displayName>Operadores</displayName>
+    </group>
+    <group name="tecnicos" parentPath="/Hospital">
+      <displayName>Tecnicos</displayName>
+    </group>
   </groups>
   <memberships>
     <membership>
       <userName>william.jobs</userName>
       <roleName>member</roleName>
-      <groupName>Hospital</groupName>
+      <groupName>operadores</groupName>
+      <groupParentPath>/Hospital</groupParentPath>
     </membership>
     <membership>
       <userName>karla.quispe</userName>
@@ -91,6 +136,42 @@
       <userName>angelo.quispe</userName>
       <roleName>medicoTratante</roleName>
       <groupName>medicos</groupName>
+      <groupParentPath>/Hospital</groupParentPath>
+    </membership>
+    <membership>
+      <userName>nicolas.contrerin</userName>
+      <roleName>member</roleName>
+      <groupName>operadores</groupName>
+      <groupParentPath>/Hospital</groupParentPath>
+    </membership>
+    <membership>
+      <userName>miguel.quispe</userName>
+      <roleName>member</roleName>
+      <groupName>tecnicos</groupName>
+      <groupParentPath>/Hospital</groupParentPath>
+    </membership>
+    <membership>
+      <userName>maria.quispe</userName>
+      <roleName>member</roleName>
+      <groupName>tecnicos</groupName>
+      <groupParentPath>/Hospital</groupParentPath>
+    </membership>
+    <membership>
+      <userName>mateo.quispe</userName>
+      <roleName>member</roleName>
+      <groupName>operadores</groupName>
+      <groupParentPath>/Hospital</groupParentPath>
+    </membership>
+    <membership>
+      <userName>nicolas.contrerin</userName>
+      <roleName>member</roleName>
+      <groupName>tecnicos</groupName>
+      <groupParentPath>/Hospital</groupParentPath>
+    </membership>
+    <membership>
+      <userName>william.jobs</userName>
+      <roleName>member</roleName>
+      <groupName>tecnicos</groupName>
       <groupParentPath>/Hospital</groupParentPath>
     </membership>
   </memberships>

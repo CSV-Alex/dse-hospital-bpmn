@@ -2,7 +2,7 @@
 <xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:decision="http://www.bonitasoft.org/ns/bpm/process/decision" xmlns:expression="http://www.bonitasoft.org/ns/bpm/expression" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.3/notation" xmlns:process="http://www.bonitasoft.org/ns/bpm/process">
   <process:MainProcess xmi:id="_iGtpoG0uEfGhAZnSvRJutg" name="ReparacionEquiposBiomedicos" bonitaModelVersion="9">
     <elements xmi:type="process:Pool" xmi:id="_iGtpoW0uEfGhAZnSvRJutg" name="ReparacionEquipos">
-      <elements xmi:type="process:Lane" xmi:id="_iGtpom0uEfGhAZnSvRJutg" name="Operador" actor="_iGuQvG0uEfGhAZnSvRJutg">
+      <elements xmi:type="process:Lane" xmi:id="_iGtpom0uEfGhAZnSvRJutg" name="Operador" actor="_iUy88G2yEfGg0aAhCDaamg">
         <elements xmi:type="process:StartEvent" xmi:id="_iGtpo20uEfGhAZnSvRJutg" name="Falla en equipo" outgoing="_iGuQuW0uEfGhAZnSvRJutg">
           <dynamicLabel xmi:type="expression:Expression" xmi:id="_iGtppG0uEfGhAZnSvRJutg" name="" content="" returnTypeFixed="true"/>
           <dynamicDescription xmi:type="expression:Expression" xmi:id="_iGtppW0uEfGhAZnSvRJutg" name="" content="" returnTypeFixed="true"/>
@@ -34,7 +34,7 @@
           <stepSummary xmi:type="expression:Expression" xmi:id="_3Vcbw20vEfGhAZnSvRJutg" name="" content="" returnTypeFixed="true"/>
         </elements>
       </elements>
-      <elements xmi:type="process:Lane" xmi:id="_owsOUG0uEfGhAZnSvRJutg" name="Tecnico">
+      <elements xmi:type="process:Lane" xmi:id="_owsOUG0uEfGhAZnSvRJutg" name="Tecnico" actor="_ji9ZMG2yEfGg0aAhCDaamg">
         <elements xmi:type="process:XORGateway" xmi:id="_1WhQ8G0vEfGhAZnSvRJutg" name="requiere reparacion" outgoing="_42sokW0uEfGhAZnSvRJutg _7RVfAG0uEfGhAZnSvRJutg" incoming="_udTy4G0uEfGhAZnSvRJutg">
           <dynamicLabel xmi:type="expression:Expression" xmi:id="_udMeIm0uEfGhAZnSvRJutg" name="" content="" returnTypeFixed="true"/>
           <dynamicDescription xmi:type="expression:Expression" xmi:id="_udMeIW0uEfGhAZnSvRJutg" name="" content="" returnTypeFixed="true"/>
@@ -155,6 +155,8 @@
         <condition xmi:type="expression:Expression" xmi:id="_5CcJEW0vEfGhAZnSvRJutg" name="" content="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
       </connections>
       <actors xmi:type="process:Actor" xmi:id="_iGuQvG0uEfGhAZnSvRJutg" documentation="This is an example of actor that is mapped to any ACME users" name="Employee actor" initiator="true"/>
+      <actors xmi:type="process:Actor" xmi:id="_iUy88G2yEfGg0aAhCDaamg" name="OperadorEquipos"/>
+      <actors xmi:type="process:Actor" xmi:id="_ji9ZMG2yEfGg0aAhCDaamg" name="TecnicoEquipos"/>
       <contract xmi:type="process:Contract" xmi:id="_iGuQvW0uEfGhAZnSvRJutg">
         <inputs xmi:type="process:ContractInput" xmi:id="_iMtAEG0yEfGhAZnSvRJutg" name="reporteFallaInput" type="COMPLEX" dataReference="reporteFalla">
           <inputs xmi:type="process:ContractInput" xmi:id="_iMtAEW0yEfGhAZnSvRJutg" name="descripcionFalla"/>
