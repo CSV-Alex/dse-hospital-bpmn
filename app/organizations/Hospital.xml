@@ -44,6 +44,22 @@
       <password encrypted="false">123</password>
       <customUserInfoValues/>
     </user>
+    <user userName="john.doe">
+      <firstName>John</firstName>
+      <lastName>Doe</lastName>
+      <personalData/>
+      <professionalData/>
+      <password encrypted="false">bpm</password>
+      <customUserInfoValues/>
+    </user>
+    <user userName="jair.torres">
+      <firstName>Jair</firstName>
+      <lastName>Torres</lastName>
+      <personalData/>
+      <professionalData/>
+      <password encrypted="false">bpm</password>
+      <customUserInfoValues/>
+    </user>
   </users>
   <roles>
     <role name="member">
@@ -52,6 +68,9 @@
     </role>
     <role name="medicoTratante">
       <displayName>MedicoTratante</displayName>
+    </role>
+    <role name="Tecnico">
+      <displayName>Tecnico</displayName>
     </role>
   </roles>
   <groups>
@@ -63,6 +82,12 @@
     </group>
     <group name="medicos" parentPath="/Hospital">
       <displayName>Medicos</displayName>
+    </group>
+    <group name="Ofi. Econom&#xed;a" parentPath="/Hospital">
+      <displayName>Ofi. Econom&#xed;a</displayName>
+    </group>
+    <group name="Depto. Patolog&#xed;a" parentPath="/Hospital">
+      <displayName>Depto. Patolog&#xed;a</displayName>
     </group>
   </groups>
   <memberships>
@@ -91,6 +116,28 @@
       <userName>angelo.quispe</userName>
       <roleName>medicoTratante</roleName>
       <groupName>medicos</groupName>
+      <groupParentPath>/Hospital</groupParentPath>
+    </membership>
+    <membership>
+      <userName>john.doe</userName>
+      <roleName>member</roleName>
+      <groupName>Hospital</groupName>
+    </membership>
+    <membership>
+      <userName>john.doe</userName>
+      <roleName>Tecnico</roleName>
+      <groupName>Depto. Patolog&#xed;a</groupName>
+      <groupParentPath>/Hospital</groupParentPath>
+    </membership>
+    <membership>
+      <userName>jair.torres</userName>
+      <roleName>member</roleName>
+      <groupName>Hospital</groupName>
+    </membership>
+    <membership>
+      <userName>jair.torres</userName>
+      <roleName>Tecnico</roleName>
+      <groupName>Ofi. Econom&#xed;a</groupName>
       <groupParentPath>/Hospital</groupParentPath>
     </membership>
   </memberships>
