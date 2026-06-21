@@ -12,5 +12,15 @@
             <queries/>
             <indexes/>
         </businessObject>
+        <businessObject qualifiedName="com.hospital.model.ReporteFalla">
+            <fields>
+                <field type="TEXT" length="255" name="descripcionFalla" nullable="true" collection="false"/>
+                <field type="BOOLEAN" length="255" name="requiereReparacion" nullable="true" collection="false"/>
+                <field type="BOOLEAN" length="255" name="reparacionExitosa" nullable="true" collection="false"/>
+            </fields>
+            <uniqueConstraints/>
+            <queries/>
+            <indexes/>
+        </businessObject>
     </businessObjects>
 </businessObjectModel>
