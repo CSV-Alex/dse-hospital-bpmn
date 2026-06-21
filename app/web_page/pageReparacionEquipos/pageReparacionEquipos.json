@@ -1,0 +1,32 @@
+{
+  "id" : "pageReparacionEquipos",
+  "name" : "pageReparacionEquipos",
+  "type" : "page",
+  "uuid" : "4915e110-629d-4505-bc46-4852dbc9655e",
+  "modelVersion" : "2.6",
+  "lastUpdate" : 1782080386119,
+  "description" : "Page generated with Bonita UI designer",
+  "rows" : [
+    [ ]
+  ],
+  "variables" : { },
+  "assets" : [
+    {
+      "id" : "3e93385d-282c-49bc-b163-44d3b68f076d",
+      "name" : "style.css",
+      "type" : "css",
+      "order" : 0,
+      "external" : false
+    },
+    {
+      "id" : "4585cdb5-c162-4b28-a48e-4f298432eee3",
+      "name" : "localization.json",
+      "type" : "json",
+      "order" : 0,
+      "external" : false
+    }
+  ],
+  "inactiveAssets" : [ ],
+  "webResources" : [ ],
+  "hasValidationError" : false
+}

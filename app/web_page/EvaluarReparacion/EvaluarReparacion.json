@@ -4,7 +4,7 @@
   "type" : "form",
   "uuid" : "72f3a8e8-6ac8-4f5a-a7e4-e547d53a9419",
   "modelVersion" : "2.6",
-  "lastUpdate" : 1782020547831,
+  "lastUpdate" : 1782076351057,
   "description" : "Page generated with Bonita UI designer",
   "rows" : [
     [
@@ -42,7 +42,7 @@
                 },
                 "text" : {
                   "type" : "interpolation",
-                  "value" : "{{ task.displayName }}"
+                  "value" : "Evaluacion de equipo defectuoso"
                 },
                 "alignment" : {
                   "type" : "constant",
@@ -51,6 +51,10 @@
                 "dimension" : {
                   "type" : "constant",
                   "value" : 12
+                },
+                "allowHTML" : {
+                  "type" : "constant",
+                  "value" : false
                 }
               },
               "reference" : "0cea0d50-fe23-44b0-af73-021491dabbfb",
@@ -154,7 +158,7 @@
                   },
                   "text" : {
                     "type" : "interpolation",
-                    "value" : "Reporte Falla"
+                    "value" : "Reporte de la falla"
                   },
                   "alignment" : {
                     "type" : "constant",
@@ -163,6 +167,10 @@
                   "dimension" : {
                     "type" : "constant",
                     "value" : 12
+                  },
+                  "allowHTML" : {
+                    "type" : "constant",
+                    "value" : false
                   }
                 },
                 "reference" : "4ecaa030-686e-41c0-88ad-c770e86851d4",
@@ -229,7 +237,7 @@
                         },
                         "label" : {
                           "type" : "interpolation",
-                          "value" : "Descripcion Falla"
+                          "value" : "Descripcion de la falla"
                         },
                         "text" : {
                           "type" : "interpolation",
@@ -242,6 +250,18 @@
                         "dimension" : {
                           "type" : "constant",
                           "value" : 12
+                        },
+                        "allowHTML" : {
+                          "type" : "constant",
+                          "value" : false
+                        },
+                        "labelPosition" : {
+                          "type" : "constant",
+                          "value" : "top"
+                        },
+                        "labelWidth" : {
+                          "type" : "constant",
+                          "value" : 4
                         }
                       },
                       "reference" : "e1504b44-1d71-4f99-9308-f86404441bfd",

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<applications xmlns="http://documentation.bonitasoft.com/application-xml-schema/1.1">
+    <application layout="custompage_layoutBonita" theme="custompage_themeBonita" token="reparacionEquipos" version="1.0" profile="User" state="ACTIVATED">
+        <displayName>Reparacion de Equipos Biomédicos</displayName>
+        <applicationPages>
+            <applicationPage customPage="" token=""/>
+        </applicationPages>
+        <applicationMenus>
+            <applicationMenu applicationPage="">
+                <displayName>My menu</displayName>
+            </applicationMenu>
+        </applicationMenus>
+    </application>
+</applications>
