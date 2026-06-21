@@ -5,6 +5,7 @@
             <fields>
                 <field type="FLOAT" length="255" name="costo" nullable="false" collection="false"/>
                 <relationField type="AGGREGATION" reference="com.hospital.model.PeticionPrueba" fetchType="LAZY" name="prueba" nullable="false" collection="false"/>
+                <field type="BOOLEAN" length="255" name="pago" nullable="true" collection="false"/>
             </fields>
             <uniqueConstraints/>
             <queries/>
