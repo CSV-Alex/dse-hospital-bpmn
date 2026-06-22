@@ -4,7 +4,7 @@
   "type" : "form",
   "uuid" : "9c325aab-4a39-49e1-a342-a6d4ead37b13",
   "modelVersion" : "2.6",
-  "lastUpdate" : 1782020441728,
+  "lastUpdate" : 1782139438147,
   "description" : "Page generated with Bonita UI designer",
   "rows" : [
     [
@@ -42,7 +42,7 @@
                 },
                 "text" : {
                   "type" : "interpolation",
-                  "value" : "{{ task.displayName }}"
+                  "value" : "Reportar Equipo defectuoso"
                 },
                 "alignment" : {
                   "type" : "constant",
@@ -51,6 +51,10 @@
                 "dimension" : {
                   "type" : "constant",
                   "value" : 12
+                },
+                "allowHTML" : {
+                  "type" : "constant",
+                  "value" : false
                 }
               },
               "reference" : "b2d3a19a-32a7-43a0-8460-cc52478ca616",
@@ -157,7 +161,7 @@
                   },
                   "label" : {
                     "type" : "interpolation",
-                    "value" : "Submit"
+                    "value" : "Reportar Falla"
                   },
                   "dataToSend" : {
                     "type" : "expression",
@@ -203,6 +207,27 @@
                   "dimension" : {
                     "type" : "constant",
                     "value" : 12
+                  },
+                  "assign" : {
+                    "type" : "constant",
+                    "value" : false
+                  },
+                  "url" : {
+                    "type" : "interpolation"
+                  },
+                  "responseStatusCode" : {
+                    "type" : "variable"
+                  },
+                  "dataFromSuccess" : {
+                    "type" : "variable"
+                  },
+                  "closeOnSuccess" : {
+                    "type" : "constant",
+                    "value" : false
+                  },
+                  "modalId" : {
+                    "type" : "constant",
+                    "value" : ""
                   }
                 },
                 "reference" : "95341957-87fd-4e08-9c45-ccbbcf3afa52",
