@@ -1,6 +1,48 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <businessObjectModel xmlns="http://documentation.bonitasoft.com/bdm-xml-schema/1.0" modelVersion="1.0">
     <businessObjects>
+        <businessObject qualifiedName="com.hospital.model.OrdenPago">
+            <fields>
+                <field type="FLOAT" length="255" name="costo" nullable="false" collection="false"/>
+                <relationField type="AGGREGATION" reference="com.hospital.model.PeticionPrueba" fetchType="LAZY" name="prueba" nullable="false" collection="false"/>
+                <field type="BOOLEAN" length="255" name="pago" nullable="true" collection="false"/>
+            </fields>
+            <uniqueConstraints/>
+            <queries/>
+            <indexes/>
+        </businessObject>
+        <businessObject qualifiedName="com.hospital.model.Paciente">
+            <fields>
+                <field type="STRING" length="255" name="nombreCompleto" nullable="true" collection="false"/>
+                <field type="LOCALDATE" length="255" name="fechaNacimiento" nullable="true" collection="false"/>
+                <field type="BOOLEAN" length="255" name="necesitaExamen" nullable="true" collection="false"/>
+                <field type="LONG" length="255" name="numeroHistoriaClinica" nullable="false" collection="false"/>
+            </fields>
+            <uniqueConstraints/>
+            <queries/>
+            <indexes/>
+        </businessObject>
+        <businessObject qualifiedName="com.hospital.model.PeticionPrueba">
+            <fields>
+                <field type="STRING" length="255" name="nombresCompletos" nullable="false" collection="false"/>
+                <field type="BOOLEAN" length="255" name="tieneSIS" nullable="false" collection="false"/>
+                <field type="STRING" length="255" name="tipoExamen" nullable="false" collection="false"/>
+                <field type="STRING" length="255" name="idUser" nullable="true" collection="false"/>
+            </fields>
+            <uniqueConstraints/>
+            <queries/>
+            <indexes/>
+        </businessObject>
+        <businessObject qualifiedName="com.hospital.model.ReporteFalla">
+            <fields>
+                <field type="TEXT" length="255" name="descripcionFalla" nullable="true" collection="false"/>
+                <field type="BOOLEAN" length="255" name="requiereReparacion" nullable="true" collection="false"/>
+                <field type="BOOLEAN" length="255" name="reparacionExitosa" nullable="true" collection="false"/>
+            </fields>
+            <uniqueConstraints/>
+            <queries/>
+            <indexes/>
+        </businessObject>
         <businessObject qualifiedName="com.company.model.Cama">
             <fields>
                 <field type="LONG" length="255" name="idCama" nullable="true" collection="false"/>
