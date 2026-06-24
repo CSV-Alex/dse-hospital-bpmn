@@ -1,9 +1,45 @@
-bin
-.classpath
-.settings
+# Maven
 target/
-.flattened-pom.xml
-dependency-reduced-pom.xml
+*.flattened-pom.xml
+pom.xml.tag
+pom.xml.releaseBackup
 pom.xml.versionsBackup
-node/
-node_modules/
+pom.xml.next
+release.properties
+dependency-reduced-pom.xml
+buildNumber.properties
+.mvn/timing.properties
+.mvn/wrapper/maven-wrapper.jar
+
+# Eclipse IDE
+.metadata
+bin/
+tmp/
+*.tmp
+*.bak
+*.swp
+*~.nib
+local.properties
+.settings/
+.loadpath
+.recommenders
+
+# Eclipse Core
+.project
+.classpath
+
+# Archivos autogenerados y temporales de Bonita
+**/uid-tmp/
+**/business-archive-tmp/
+**/generated-sources/
+**/generated-groovy-sources/
+
+# Bases de datos locales H2
+h2_database/*.db
+h2_database/*.lock.db
+h2_database/*.mv.db
+h2_database/*.trace.db
+
+# Archivos del Sistema Operativo
+.DS_Store
+Thumbs.db

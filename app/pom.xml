@@ -3,12 +3,12 @@
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <modelVersion>4.0.0</modelVersion>
   <parent>
-    <groupId>com.hospital</groupId>
-    <artifactId>hospital-bpmn-parent</artifactId>
+    <groupId>com.company</groupId>
+    <artifactId>pract3-parent</artifactId>
     <version>0.0.1</version>
   </parent>
-  <artifactId>hospital-bpmn</artifactId>
-  <name>hospital-bpmn</name>
+  <artifactId>pract3</artifactId>
+  <name>pract3</name>
   <dependencies>
     <dependency>
       <groupId>org.bonitasoft.engine</groupId>
@@ -84,7 +84,7 @@
     </dependency>
     <dependency>
       <groupId>${project.groupId}</groupId>
-      <artifactId>hospital-bpmn-bdm-model</artifactId>
+      <artifactId>pract3-bdm-model</artifactId>
       <version>${project.version}</version>
       <scope>provided</scope>
     </dependency>

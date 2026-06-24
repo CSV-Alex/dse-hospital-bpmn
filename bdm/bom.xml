@@ -1,12 +1,46 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <businessObjectModel xmlns="http://documentation.bonitasoft.com/bdm-xml-schema/1.0" modelVersion="1.0">
     <businessObjects>
-        <businessObject qualifiedName="com.hospital.model.Paciente">
+        <businessObject qualifiedName="com.company.model.Cama">
             <fields>
+                <field type="LONG" length="255" name="idCama" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="codigoCama" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="sala" nullable="true" collection="false"/>
+                <field type="BOOLEAN" length="255" name="disponible" nullable="true" collection="false"/>
+            </fields>
+            <uniqueConstraints/>
+            <queries/>
+            <indexes/>
+        </businessObject>
+        <businessObject qualifiedName="com.company.model.Hospitalizacion">
+            <fields>
+                <field type="LONG" length="255" name="idHosp" nullable="true" collection="false"/>
+                <field type="LOCALDATE" length="255" name="fechaIngreso" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="estado" nullable="true" collection="false"/>
+                <relationField type="AGGREGATION" reference="com.company.model.Paciente" fetchType="LAZY" name="paciente" nullable="true" collection="false"/>
+                <relationField type="AGGREGATION" reference="com.company.model.Cama" fetchType="LAZY" name="camaAsignada" nullable="true" collection="false"/>
+            </fields>
+            <uniqueConstraints/>
+            <queries/>
+            <indexes/>
+        </businessObject>
+        <businessObject qualifiedName="com.company.model.OrdenInternamiento">
+            <fields>
+                <field type="LONG" length="255" name="numeroOrden" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="especialidad" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="medicoSolicitante" nullable="true" collection="false"/>
+                <field type="LOCALDATE" length="255" name="fechaEmision" nullable="true" collection="false"/>
+            </fields>
+            <uniqueConstraints/>
+            <queries/>
+            <indexes/>
+        </businessObject>
+        <businessObject qualifiedName="com.company.model.Paciente">
+            <fields>
+                <field type="STRING" length="255" name="dni" nullable="true" collection="false"/>
                 <field type="STRING" length="255" name="nombreCompleto" nullable="true" collection="false"/>
                 <field type="LOCALDATE" length="255" name="fechaNacimiento" nullable="true" collection="false"/>
-                <field type="BOOLEAN" length="255" name="necesitaExamen" nullable="true" collection="false"/>
-                <field type="LONG" length="255" name="numeroHistoriaClinica" nullable="false" collection="false"/>
+                <field type="STRING" length="255" name="tipoSeguro" nullable="true" collection="false"/>
             </fields>
             <uniqueConstraints/>
             <queries/>

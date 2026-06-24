@@ -3,11 +3,11 @@
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <modelVersion>4.0.0</modelVersion>
   <parent>
-    <groupId>com.hospital</groupId>
-    <artifactId>hospital-bpmn-bdm-parent</artifactId>
+    <groupId>com.company</groupId>
+    <artifactId>pract3-bdm-parent</artifactId>
     <version>0.0.1</version>
   </parent>
-  <artifactId>hospital-bpmn-bdm-model</artifactId>
+  <artifactId>pract3-bdm-model</artifactId>
   <dependencies>
     <dependency>
       <groupId>org.bonitasoft.engine.data</groupId>
