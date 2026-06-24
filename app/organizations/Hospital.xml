@@ -55,6 +55,11 @@
     <user userName="jair.torres">
       <firstName>Jair</firstName>
       <lastName>Torres</lastName>
+	  <personalData/>
+	  <professionalData/>
+	  <password encrypted="false">bpm</password>
+	  <customUserInfoValues/>
+    </user>
     <user userName="nicolas.contrerin">
       <firstName>Nicolas</firstName>
       <lastName>Contreras</lastName>
@@ -96,7 +101,9 @@
     <role name="medicoTratante">
       <displayName>MedicoTratante</displayName>
     </role>
-    <role name="Tecnico">
+	<role name="Tecnico">
+		<displayName>Tecnico</displayName>
+	</role>
     <role name="operadorEquipos">
       <displayName>Operador</displayName>
     </role>
@@ -117,8 +124,9 @@
     <group name="Ofi. Econom&#xed;a" parentPath="/Hospital">
       <displayName>Ofi. Econom&#xed;a</displayName>
     </group>
-    <group name="Depto. Patolog&#xed;a" parentPath="/Hospital">
+	<group name="Depto. Patolog&#xed;a" parentPath="/Hospital">
       <displayName>Depto. Patolog&#xed;a</displayName>
+	</group>
     <group name="operadores" parentPath="/Hospital">
       <displayName>Operadores</displayName>
     </group>
