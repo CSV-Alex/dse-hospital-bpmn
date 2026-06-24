@@ -177,14 +177,12 @@
     <membership>
       <userName>jair.torres</userName>
       <roleName>member</roleName>
-      <groupName>Hospital</groupName>
+      <groupName>Ofi. Econom&#xed;a</groupName>
+      <groupParentPath>/Hospital</groupParentPath>
     </membership>
     <membership>
-      <userName>jair.torres</userName>
-      <roleName>Tecnico</roleName>
-      <groupName>Ofi. Econom&#xed;a</groupName>
       <userName>nicolas.contrerin</userName>
-      <roleName>member</roleName>
+      <roleName>Tecnico</roleName>
       <groupName>operadores</groupName>
       <groupParentPath>/Hospital</groupParentPath>
     </membership>
