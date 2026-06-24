@@ -2,7 +2,7 @@
 <xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:decision="http://www.bonitasoft.org/ns/bpm/process/decision" xmlns:expression="http://www.bonitasoft.org/ns/bpm/expression" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.3/notation" xmlns:process="http://www.bonitasoft.org/ns/bpm/process">
   <process:MainProcess xmi:id="_iGtpoG0uEfGhAZnSvRJutg" name="ReparacionEquiposBiomedicos" bonitaModelVersion="9">
     <elements xmi:type="process:Pool" xmi:id="_iGtpoW0uEfGhAZnSvRJutg" name="ReparacionEquipos">
-      <elements xmi:type="process:Lane" xmi:id="_iGtpom0uEfGhAZnSvRJutg" name="Operador" actor="_iGuQvG0uEfGhAZnSvRJutg">
+      <elements xmi:type="process:Lane" xmi:id="_iGtpom0uEfGhAZnSvRJutg" name="Operador" actor="_iUy88G2yEfGg0aAhCDaamg">
         <elements xmi:type="process:StartEvent" xmi:id="_iGtpo20uEfGhAZnSvRJutg" name="Falla en equipo" outgoing="_iGuQuW0uEfGhAZnSvRJutg">
           <dynamicLabel xmi:type="expression:Expression" xmi:id="_iGtppG0uEfGhAZnSvRJutg" name="" content="" returnTypeFixed="true"/>
           <dynamicDescription xmi:type="expression:Expression" xmi:id="_iGtppW0uEfGhAZnSvRJutg" name="" content="" returnTypeFixed="true"/>
@@ -34,7 +34,7 @@
           <stepSummary xmi:type="expression:Expression" xmi:id="_3Vcbw20vEfGhAZnSvRJutg" name="" content="" returnTypeFixed="true"/>
         </elements>
       </elements>
-      <elements xmi:type="process:Lane" xmi:id="_owsOUG0uEfGhAZnSvRJutg" name="Tecnico">
+      <elements xmi:type="process:Lane" xmi:id="_owsOUG0uEfGhAZnSvRJutg" name="Tecnico" actor="_ji9ZMG2yEfGg0aAhCDaamg">
         <elements xmi:type="process:XORGateway" xmi:id="_1WhQ8G0vEfGhAZnSvRJutg" name="requiere reparacion" outgoing="_42sokW0uEfGhAZnSvRJutg _7RVfAG0uEfGhAZnSvRJutg" incoming="_udTy4G0uEfGhAZnSvRJutg">
           <dynamicLabel xmi:type="expression:Expression" xmi:id="_udMeIm0uEfGhAZnSvRJutg" name="" content="" returnTypeFixed="true"/>
           <dynamicDescription xmi:type="expression:Expression" xmi:id="_udMeIW0uEfGhAZnSvRJutg" name="" content="" returnTypeFixed="true"/>
@@ -44,11 +44,6 @@
           <dynamicLabel xmi:type="expression:Expression" xmi:id="_091EIW0vEfGhAZnSvRJutg" name="" content="" returnTypeFixed="true"/>
           <dynamicDescription xmi:type="expression:Expression" xmi:id="_091EIG0vEfGhAZnSvRJutg" name="" content="" returnTypeFixed="true"/>
           <stepSummary xmi:type="expression:Expression" xmi:id="_091EIm0vEfGhAZnSvRJutg" name="" content="" returnTypeFixed="true"/>
-        </elements>
-        <elements xmi:type="process:EndMessageEvent" xmi:id="_fXzhcG0wEfGhAZnSvRJutg" name="Enviar a reemplazo" incoming="_5CbiCG0vEfGhAZnSvRJutg">
-          <dynamicLabel xmi:type="expression:Expression" xmi:id="_5CbiAm0vEfGhAZnSvRJutg" name="" content="" returnTypeFixed="true"/>
-          <dynamicDescription xmi:type="expression:Expression" xmi:id="_5CbiAW0vEfGhAZnSvRJutg" name="" content="" returnTypeFixed="true"/>
-          <stepSummary xmi:type="expression:Expression" xmi:id="_5CbiA20vEfGhAZnSvRJutg" name="" content="" returnTypeFixed="true"/>
         </elements>
         <elements xmi:type="process:Task" xmi:id="_28Zs0G0zEfGhAZnSvRJutg" name="Evaluar equipo" outgoing="_udTy4G0uEfGhAZnSvRJutg" incoming="_VM1-wW0vEfGhAZnSvRJutg" overrideActorsOfTheLane="false">
           <dynamicLabel xmi:type="expression:Expression" xmi:id="_VM1Xsm0vEfGhAZnSvRJutg" name="" content="" returnTypeFixed="true"/>
@@ -110,6 +105,11 @@
           </contract>
           <expectedDuration xmi:type="expression:Expression" xmi:id="_3Zss220zEfGhAZnSvRJutg" name="" content="" returnType="java.lang.Long" returnTypeFixed="true"/>
         </elements>
+        <elements xmi:type="process:EndEvent" xmi:id="_hbedYG20EfGg0aAhCDaamg" name="Enviar a reemplazo" incoming="_5CbiCG0vEfGhAZnSvRJutg">
+          <dynamicLabel xmi:type="expression:Expression" xmi:id="_5CbiAm0vEfGhAZnSvRJutg" name="" content="" returnTypeFixed="true"/>
+          <dynamicDescription xmi:type="expression:Expression" xmi:id="_5CbiAW0vEfGhAZnSvRJutg" name="" content="" returnTypeFixed="true"/>
+          <stepSummary xmi:type="expression:Expression" xmi:id="_5CbiA20vEfGhAZnSvRJutg" name="" content="" returnTypeFixed="true"/>
+        </elements>
       </elements>
       <data xmi:type="process:BusinessObjectData" xmi:id="_Bj1QcG0yEfGhAZnSvRJutg" name="reporteFalla" dataType="_iGuQ1W0uEfGhAZnSvRJutg" className="com.hospital.model.ReporteFalla">
         <defaultValue xmi:type="expression:Expression" xmi:id="_iMuOMG0yEfGhAZnSvRJutg" name="initReporteFalla()" content="def reporteFallaVar = new com.hospital.model.ReporteFalla()&#xD;&#xA;reporteFallaVar.descripcionFalla = reporteFallaInput?.descripcionFalla&#xD;&#xA;return reporteFallaVar" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="com.hospital.model.ReporteFalla">
@@ -117,7 +117,7 @@
         </defaultValue>
       </data>
       <formMapping xmi:type="process:FormMapping" xmi:id="_iGuQtW0uEfGhAZnSvRJutg">
-        <targetForm xmi:type="expression:Expression" xmi:id="_iGuQtm0uEfGhAZnSvRJutg" name="" content="" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
+        <targetForm xmi:type="expression:Expression" xmi:id="_6-f0IG5CEfGI5-kIQ7j36Q" name="" content="" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
       </formMapping>
       <overviewFormMapping xmi:type="process:FormMapping" xmi:id="_iGuQt20uEfGhAZnSvRJutg">
         <targetForm xmi:type="expression:Expression" xmi:id="_iGuQuG0uEfGhAZnSvRJutg" name="" content="" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
@@ -132,11 +132,13 @@
       </connections>
       <connections xmi:type="process:SequenceFlow" xmi:id="_42sokW0uEfGhAZnSvRJutg" name="Si" target="_3ZsFwG0zEfGhAZnSvRJutg" source="_1WhQ8G0vEfGhAZnSvRJutg">
         <decisionTable xmi:type="decision:DecisionTable" xmi:id="_42sokm0uEfGhAZnSvRJutg"/>
-        <condition xmi:type="expression:Expression" xmi:id="_42sok20uEfGhAZnSvRJutg" name="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
+        <condition xmi:type="expression:Expression" xmi:id="_42sok20uEfGhAZnSvRJutg" name="newScript()" content="reporteFalla.requiereReparacion == true" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.lang.Boolean" returnTypeFixed="true">
+          <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_NFEk8G20EfGg0aAhCDaamg" name="reporteFalla" dataType="_iGuQ1W0uEfGhAZnSvRJutg" className="com.hospital.model.ReporteFalla"/>
+        </condition>
       </connections>
-      <connections xmi:type="process:SequenceFlow" xmi:id="_7RVfAG0uEfGhAZnSvRJutg" name="No" target="_7RUQ4G0uEfGhAZnSvRJutg" source="_1WhQ8G0vEfGhAZnSvRJutg">
+      <connections xmi:type="process:SequenceFlow" xmi:id="_7RVfAG0uEfGhAZnSvRJutg" name="No" target="_7RUQ4G0uEfGhAZnSvRJutg" source="_1WhQ8G0vEfGhAZnSvRJutg" isDefault="true">
         <decisionTable xmi:type="decision:DecisionTable" xmi:id="_7RVfAW0uEfGhAZnSvRJutg"/>
-        <condition xmi:type="expression:Expression" xmi:id="_7RVfAm0uEfGhAZnSvRJutg" name="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
+        <condition xmi:type="expression:Expression" xmi:id="_7RVfAm0uEfGhAZnSvRJutg" name="" content="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
       </connections>
       <connections xmi:type="process:SequenceFlow" xmi:id="_VM1-wW0vEfGhAZnSvRJutg" target="_28Zs0G0zEfGhAZnSvRJutg" source="_iGtpp20uEfGhAZnSvRJutg">
         <decisionTable xmi:type="decision:DecisionTable" xmi:id="_VM1-wm0vEfGhAZnSvRJutg"/>
@@ -146,15 +148,19 @@
         <decisionTable xmi:type="decision:DecisionTable" xmi:id="_091rMW0vEfGhAZnSvRJutg"/>
         <condition xmi:type="expression:Expression" xmi:id="_091rMm0vEfGhAZnSvRJutg" name="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
       </connections>
-      <connections xmi:type="process:SequenceFlow" xmi:id="_3VdC0m0vEfGhAZnSvRJutg" target="_3VcbwG0vEfGhAZnSvRJutg" source="_11YXMG0vEfGhAZnSvRJutg">
+      <connections xmi:type="process:SequenceFlow" xmi:id="_3VdC0m0vEfGhAZnSvRJutg" name="No" target="_3VcbwG0vEfGhAZnSvRJutg" source="_11YXMG0vEfGhAZnSvRJutg" isDefault="true">
         <decisionTable xmi:type="decision:DecisionTable" xmi:id="_3VdC020vEfGhAZnSvRJutg"/>
-        <condition xmi:type="expression:Expression" xmi:id="_3VdC1G0vEfGhAZnSvRJutg" name="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
+        <condition xmi:type="expression:Expression" xmi:id="_3VdC1G0vEfGhAZnSvRJutg" name="" content="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
       </connections>
-      <connections xmi:type="process:SequenceFlow" xmi:id="_5CbiCG0vEfGhAZnSvRJutg" target="_fXzhcG0wEfGhAZnSvRJutg" source="_11YXMG0vEfGhAZnSvRJutg">
+      <connections xmi:type="process:SequenceFlow" xmi:id="_5CbiCG0vEfGhAZnSvRJutg" name="Si" target="_hbedYG20EfGg0aAhCDaamg" source="_11YXMG0vEfGhAZnSvRJutg">
         <decisionTable xmi:type="decision:DecisionTable" xmi:id="_5CcJEG0vEfGhAZnSvRJutg"/>
-        <condition xmi:type="expression:Expression" xmi:id="_5CcJEW0vEfGhAZnSvRJutg" name="" content="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
+        <condition xmi:type="expression:Expression" xmi:id="_5CcJEW0vEfGhAZnSvRJutg" name="newScript()" content="reporteFalla.reparacionExitosa == true" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.lang.Boolean" returnTypeFixed="true">
+          <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_TsSJgG20EfGg0aAhCDaamg" name="reporteFalla" dataType="_iGuQ1W0uEfGhAZnSvRJutg" className="com.hospital.model.ReporteFalla"/>
+        </condition>
       </connections>
-      <actors xmi:type="process:Actor" xmi:id="_iGuQvG0uEfGhAZnSvRJutg" documentation="This is an example of actor that is mapped to any ACME users" name="Employee actor" initiator="true"/>
+      <actors xmi:type="process:Actor" xmi:id="_iGuQvG0uEfGhAZnSvRJutg" documentation="This is an example of actor that is mapped to any ACME users" name="Employee actor"/>
+      <actors xmi:type="process:Actor" xmi:id="_iUy88G2yEfGg0aAhCDaamg" name="OperadorEquipos" initiator="true"/>
+      <actors xmi:type="process:Actor" xmi:id="_ji9ZMG2yEfGg0aAhCDaamg" name="TecnicoEquipos"/>
       <contract xmi:type="process:Contract" xmi:id="_iGuQvW0uEfGhAZnSvRJutg">
         <inputs xmi:type="process:ContractInput" xmi:id="_iMtAEG0yEfGhAZnSvRJutg" name="reporteFallaInput" type="COMPLEX" dataReference="reporteFalla">
           <inputs xmi:type="process:ContractInput" xmi:id="_iMtAEW0yEfGhAZnSvRJutg" name="descripcionFalla"/>
@@ -242,12 +248,6 @@
               </children>
               <layoutConstraint xmi:type="notation:Bounds" xmi:id="_11YXNW0vEfGhAZnSvRJutg" x="721" y="61" width="43" height="43"/>
             </children>
-            <children xmi:type="notation:Shape" xmi:id="_fX0Ig20wEfGhAZnSvRJutg" type="3011" element="_fXzhcG0wEfGhAZnSvRJutg" fontName="Segoe UI">
-              <children xmi:type="notation:DecorationNode" xmi:id="_fX0vkG0wEfGhAZnSvRJutg" type="5028">
-                <layoutConstraint xmi:type="notation:Location" xmi:id="_fX0vkW0wEfGhAZnSvRJutg" y="5"/>
-              </children>
-              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_fX0IhG0wEfGhAZnSvRJutg" x="854" y="66" width="30" height="30"/>
-            </children>
             <children xmi:type="notation:Shape" xmi:id="_28a68m0zEfGhAZnSvRJutg" type="3005" element="_28Zs0G0zEfGhAZnSvRJutg" fontName="Segoe UI" fillColor="14334392" lineColor="10710316">
               <children xmi:type="notation:DecorationNode" xmi:id="_28a69G0zEfGhAZnSvRJutg" type="5005"/>
               <layoutConstraint xmi:type="notation:Bounds" xmi:id="_28a6820zEfGhAZnSvRJutg" x="189" y="56" width="100" height="50"/>
@@ -255,6 +255,12 @@
             <children xmi:type="notation:Shape" xmi:id="_3Zss3G0zEfGhAZnSvRJutg" type="3005" element="_3ZsFwG0zEfGhAZnSvRJutg" fontName="Segoe UI" fillColor="14334392" lineColor="10710316">
               <children xmi:type="notation:DecorationNode" xmi:id="_3Zss3m0zEfGhAZnSvRJutg" type="5005"/>
               <layoutConstraint xmi:type="notation:Bounds" xmi:id="_3Zss3W0zEfGhAZnSvRJutg" x="512" y="56" width="100" height="50"/>
+            </children>
+            <children xmi:type="notation:Shape" xmi:id="_hbmZMG20EfGg0aAhCDaamg" type="3003" element="_hbedYG20EfGg0aAhCDaamg" fontName="Segoe UI">
+              <children xmi:type="notation:DecorationNode" xmi:id="_hbnAQG20EfGg0aAhCDaamg" type="5025">
+                <layoutConstraint xmi:type="notation:Location" xmi:id="_hbnAQW20EfGg0aAhCDaamg" y="5"/>
+              </children>
+              <layoutConstraint xmi:type="notation:Bounds" xmi:id="_hbmZMW20EfGg0aAhCDaamg" x="854" y="66" width="30" height="30"/>
             </children>
           </children>
           <styles xmi:type="notation:DescriptionStyle" xmi:id="_owwfwW0uEfGhAZnSvRJutg"/>
@@ -295,7 +301,7 @@
     </edges>
     <edges xmi:type="notation:Connector" xmi:id="_7RVfA20uEfGhAZnSvRJutg" type="4001" element="_7RVfAG0uEfGhAZnSvRJutg" source="_1Wh4A20vEfGhAZnSvRJutg" target="_7RU38G0uEfGhAZnSvRJutg" roundedBendpointsRadius="10" routing="Rectilinear">
       <children xmi:type="notation:DecorationNode" xmi:id="_7RVfBm0uEfGhAZnSvRJutg" type="6001">
-        <layoutConstraint xmi:type="notation:Location" xmi:id="_7RVfB20uEfGhAZnSvRJutg" y="-10"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_7RVfB20uEfGhAZnSvRJutg" x="-17" y="-13"/>
       </children>
       <styles xmi:type="notation:FontStyle" xmi:id="_7RVfBG0uEfGhAZnSvRJutg" fontName="Segoe UI"/>
       <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_7RVfBW0uEfGhAZnSvRJutg" points="[0, 0, 0, 0]$[0, 0, 0, 0]"/>
@@ -316,12 +322,12 @@
     </edges>
     <edges xmi:type="notation:Connector" xmi:id="_3VdC1W0vEfGhAZnSvRJutg" type="4001" element="_3VdC0m0vEfGhAZnSvRJutg" source="_11YXNG0vEfGhAZnSvRJutg" target="_3VcbxG0vEfGhAZnSvRJutg" roundedBendpointsRadius="10" routing="Rectilinear">
       <children xmi:type="notation:DecorationNode" xmi:id="_3VdC2G0vEfGhAZnSvRJutg" type="6001">
-        <layoutConstraint xmi:type="notation:Location" xmi:id="_3VdC2W0vEfGhAZnSvRJutg" y="-10"/>
+        <layoutConstraint xmi:type="notation:Location" xmi:id="_3VdC2W0vEfGhAZnSvRJutg" x="-7" y="-12"/>
       </children>
       <styles xmi:type="notation:FontStyle" xmi:id="_3VdC1m0vEfGhAZnSvRJutg" fontName="Segoe UI"/>
       <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_3VdC120vEfGhAZnSvRJutg" points="[0, 0, 0, 0]$[0, 0, 0, 0]"/>
     </edges>
-    <edges xmi:type="notation:Connector" xmi:id="_5CcJEm0vEfGhAZnSvRJutg" type="4001" element="_5CbiCG0vEfGhAZnSvRJutg" source="_11YXNG0vEfGhAZnSvRJutg" target="_fX0Ig20wEfGhAZnSvRJutg" roundedBendpointsRadius="10" routing="Rectilinear">
+    <edges xmi:type="notation:Connector" xmi:id="_5CcJEm0vEfGhAZnSvRJutg" type="4001" element="_5CbiCG0vEfGhAZnSvRJutg" source="_11YXNG0vEfGhAZnSvRJutg" target="_hbmZMG20EfGg0aAhCDaamg" roundedBendpointsRadius="10" routing="Rectilinear">
       <children xmi:type="notation:DecorationNode" xmi:id="_5CcJFW0vEfGhAZnSvRJutg" type="6001">
         <layoutConstraint xmi:type="notation:Location" xmi:id="_5CcJFm0vEfGhAZnSvRJutg" y="-10"/>
       </children>
