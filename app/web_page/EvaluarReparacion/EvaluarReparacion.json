@@ -1,10 +1,10 @@
 {
-  "id" : "newForm",
-  "name" : "newForm",
+  "id" : "EvaluarReparacion",
+  "name" : "EvaluarReparacion",
   "type" : "form",
-  "uuid" : "d47e945a-a268-469a-9254-93e86b6e0520",
+  "uuid" : "72f3a8e8-6ac8-4f5a-a7e4-e547d53a9419",
   "modelVersion" : "2.6",
-  "lastUpdate" : 1781535854233,
+  "lastUpdate" : 1782076351057,
   "description" : "Page generated with Bonita UI designer",
   "rows" : [
     [
@@ -14,7 +14,7 @@
           "xs" : 12
         },
         "propertyValues" : { },
-        "reference" : "809872ea-bbc3-4577-a876-cfceaefccd19",
+        "reference" : "73a22bd6-5d83-4416-b29e-ecd649a2b912",
         "hasValidationError" : false,
         "id" : "pbContainer",
         "rows" : [
@@ -42,7 +42,7 @@
                 },
                 "text" : {
                   "type" : "interpolation",
-                  "value" : "{{ task.displayName }}"
+                  "value" : "Evaluacion de equipo defectuoso"
                 },
                 "alignment" : {
                   "type" : "constant",
@@ -51,9 +51,13 @@
                 "dimension" : {
                   "type" : "constant",
                   "value" : 12
+                },
+                "allowHTML" : {
+                  "type" : "constant",
+                  "value" : false
                 }
               },
-              "reference" : "8a77f012-39d9-48c6-84d6-8a138498f348",
+              "reference" : "0cea0d50-fe23-44b0-af73-021491dabbfb",
               "hasValidationError" : false,
               "id" : "pbTitle",
               "description" : ""
@@ -101,7 +105,7 @@
                   "value" : 12
                 }
               },
-              "reference" : "003fefe9-079a-49e8-b090-87996cf2b7d1",
+              "reference" : "4cfa0edc-3870-4667-b2d5-374d58df72fd",
               "hasValidationError" : false,
               "id" : "pbText",
               "description" : ""
@@ -117,7 +121,7 @@
           "xs" : 12
         },
         "propertyValues" : { },
-        "reference" : "5c1af070-285d-4949-8c41-88b360a3b11e",
+        "reference" : "286dde31-ed2d-47f0-833e-8b12f7c4355f",
         "hasValidationError" : false,
         "id" : "pbFormContainer",
         "container" : {
@@ -126,7 +130,7 @@
             "xs" : 12
           },
           "propertyValues" : { },
-          "reference" : "85f7d7c2-728a-4e53-9d82-0789bca706a9",
+          "reference" : "055883e1-b6c7-40dd-aace-7a76a20ff626",
           "hasValidationError" : false,
           "id" : "pbContainer",
           "rows" : [
@@ -154,7 +158,7 @@
                   },
                   "text" : {
                     "type" : "interpolation",
-                    "value" : "Paciente Actual"
+                    "value" : "Reporte de la falla"
                   },
                   "alignment" : {
                     "type" : "constant",
@@ -163,9 +167,13 @@
                   "dimension" : {
                     "type" : "constant",
                     "value" : 12
+                  },
+                  "allowHTML" : {
+                    "type" : "constant",
+                    "value" : false
                   }
                 },
-                "reference" : "7ff95d4d-6044-44fa-ba96-5a7a0675eb81",
+                "reference" : "4ecaa030-686e-41c0-88ad-c770e86851d4",
                 "hasValidationError" : false,
                 "id" : "pbTitle",
                 "description" : ""
@@ -197,7 +205,7 @@
                     "value" : 12
                   }
                 },
-                "reference" : "be57b74b-8946-4108-9d9b-a747d1bfae85",
+                "reference" : "f04a203d-89e2-4b75-a215-fb94a6a99cb5",
                 "hasValidationError" : false,
                 "id" : "pbContainer",
                 "rows" : [
@@ -211,133 +219,54 @@
                         "lg" : 12
                       },
                       "propertyValues" : {
-                        "labelHidden" : {
-                          "type" : "constant",
-                          "value" : false
-                        },
-                        "hidden" : {
-                          "type" : "constant",
-                          "value" : false
-                        },
-                        "labelPosition" : {
-                          "type" : "constant",
-                          "value" : "top"
-                        },
-                        "cssClasses" : {
-                          "type" : "constant",
-                          "value" : ""
-                        },
-                        "labelWidth" : {
-                          "type" : "constant",
-                          "value" : 1
-                        },
-                        "readOnly" : {
-                          "type" : "constant",
-                          "value" : false
-                        },
-                        "label" : {
-                          "type" : "interpolation",
-                          "value" : "Nombre Completo"
-                        },
-                        "placeholder" : {
-                          "type" : "constant"
-                        },
-                        "type" : {
-                          "type" : "constant",
-                          "value" : "text"
-                        },
-                        "dimension" : {
-                          "type" : "constant",
-                          "value" : 12
-                        },
-                        "value" : {
-                          "type" : "variable",
-                          "value" : "pacienteActual.nombreCompleto"
-                        },
-                        "required" : {
-                          "type" : "constant",
-                          "value" : false
-                        }
-                      },
-                      "reference" : "4834fadb-0394-4a0e-b5f3-004f1abe157d",
-                      "hasValidationError" : false,
-                      "id" : "pbInput",
-                      "description" : ""
-                    }
-                  ],
-                  [
-                    {
-                      "type" : "component",
-                      "dimension" : {
-                        "md" : 12,
-                        "sm" : 12,
-                        "xs" : 12,
-                        "lg" : 12
-                      },
-                      "propertyValues" : {
-                        "hidden" : {
-                          "type" : "constant",
-                          "value" : false
-                        },
-                        "dateFormat" : {
-                          "type" : "constant",
-                          "value" : "MM/dd/yyyy"
-                        },
-                        "cssClasses" : {
-                          "type" : "constant",
-                          "value" : ""
-                        },
-                        "labelWidth" : {
-                          "type" : "constant",
-                          "value" : 1
-                        },
-                        "readOnly" : {
-                          "type" : "constant",
-                          "value" : false
-                        },
-                        "label" : {
-                          "type" : "interpolation",
-                          "value" : "Fecha Nacimiento"
-                        },
-                        "type" : {
-                          "type" : "constant"
-                        },
-                        "required" : {
-                          "type" : "constant",
-                          "value" : false
-                        },
-                        "todayLabel" : {
-                          "type" : "constant",
-                          "value" : "Today"
-                        },
-                        "labelHidden" : {
-                          "type" : "constant",
-                          "value" : false
-                        },
-                        "showToday" : {
+                        "allowHtml" : {
                           "type" : "constant",
                           "value" : true
                         },
-                        "labelPosition" : {
+                        "labelHidden" : {
                           "type" : "constant",
-                          "value" : "top"
+                          "value" : false
                         },
-                        "placeholder" : {
+                        "hidden" : {
+                          "type" : "expression",
+                          "value" : "!reporteFalla.descripcionFalla"
+                        },
+                        "cssClasses" : {
                           "type" : "constant",
-                          "value" : "Enter a date (mm/dd/yyyy)"
+                          "value" : ""
+                        },
+                        "label" : {
+                          "type" : "interpolation",
+                          "value" : "Descripcion de la falla"
+                        },
+                        "text" : {
+                          "type" : "interpolation",
+                          "value" : "{{reporteFalla.descripcionFalla}}"
+                        },
+                        "alignment" : {
+                          "type" : "constant",
+                          "value" : "left"
                         },
                         "dimension" : {
                           "type" : "constant",
                           "value" : 12
                         },
-                        "value" : {
-                          "type" : "variable",
-                          "value" : "pacienteActual.fechaNacimiento"
+                        "allowHTML" : {
+                          "type" : "constant",
+                          "value" : false
+                        },
+                        "labelPosition" : {
+                          "type" : "constant",
+                          "value" : "top"
+                        },
+                        "labelWidth" : {
+                          "type" : "constant",
+                          "value" : 4
                         }
                       },
-                      "reference" : "69d03702-3c3c-4682-8bda-44c766244152",
+                      "reference" : "e1504b44-1d71-4f99-9308-f86404441bfd",
                       "hasValidationError" : false,
-                      "id" : "pbDatePicker",
+                      "id" : "pbText",
                       "description" : ""
                     }
                   ],
@@ -359,32 +288,17 @@
                           "type" : "constant",
                           "value" : false
                         },
-                        "labelPosition" : {
-                          "type" : "constant",
-                          "value" : "top"
-                        },
                         "cssClasses" : {
                           "type" : "constant",
                           "value" : ""
                         },
-                        "labelWidth" : {
-                          "type" : "constant",
-                          "value" : 1
-                        },
-                        "readOnly" : {
+                        "disabled" : {
                           "type" : "constant",
                           "value" : false
                         },
                         "label" : {
                           "type" : "interpolation",
-                          "value" : "Numero Historia Clinica"
-                        },
-                        "placeholder" : {
-                          "type" : "constant"
-                        },
-                        "type" : {
-                          "type" : "constant",
-                          "value" : "text"
+                          "value" : "Requiere Reparacion"
                         },
                         "dimension" : {
                           "type" : "constant",
@@ -392,16 +306,57 @@
                         },
                         "value" : {
                           "type" : "variable",
-                          "value" : "pacienteActual.numeroHistoriaClinica"
-                        },
-                        "required" : {
-                          "type" : "constant",
-                          "value" : true
+                          "value" : "reporteFalla.requiereReparacion"
                         }
                       },
-                      "reference" : "ca8cfcbd-d6c9-4be8-a9ab-fda5b0ca897f",
+                      "reference" : "f8d68082-ffc7-45b1-adb5-9437807874ea",
                       "hasValidationError" : false,
-                      "id" : "pbInput",
+                      "id" : "pbCheckbox",
+                      "description" : ""
+                    }
+                  ],
+                  [
+                    {
+                      "type" : "component",
+                      "dimension" : {
+                        "md" : 12,
+                        "sm" : 12,
+                        "xs" : 12,
+                        "lg" : 12
+                      },
+                      "propertyValues" : {
+                        "labelHidden" : {
+                          "type" : "constant",
+                          "value" : false
+                        },
+                        "hidden" : {
+                          "type" : "expression",
+                          "value" : "!reporteFalla.reparacionExitosa"
+                        },
+                        "cssClasses" : {
+                          "type" : "constant",
+                          "value" : ""
+                        },
+                        "disabled" : {
+                          "type" : "constant",
+                          "value" : true
+                        },
+                        "label" : {
+                          "type" : "interpolation",
+                          "value" : "Reparacion Exitosa"
+                        },
+                        "dimension" : {
+                          "type" : "constant",
+                          "value" : 12
+                        },
+                        "value" : {
+                          "type" : "variable",
+                          "value" : "reporteFalla.reparacionExitosa"
+                        }
+                      },
+                      "reference" : "57c147d7-e1ba-47a2-84b3-d65757bbc14e",
+                      "hasValidationError" : false,
+                      "id" : "pbCheckbox",
                       "description" : ""
                     }
                   ]
@@ -483,7 +438,7 @@
                     "value" : 12
                   }
                 },
-                "reference" : "0b33e66b-ebc5-40b0-a3bb-5df3d86937b4",
+                "reference" : "540e9769-a93c-4ca6-8df5-ce7f2b1f2dbd",
                 "hasValidationError" : false,
                 "id" : "pbButton",
                 "description" : ""
@@ -535,7 +490,7 @@
                     "value" : 12
                   }
                 },
-                "reference" : "42c813e4-aa95-409a-95df-36c058df6e64",
+                "reference" : "f1f0d6cc-b9e9-4b0e-b587-3cf20a9ad6a1",
                 "hasValidationError" : false,
                 "id" : "pbText",
                 "description" : ""
@@ -572,13 +527,11 @@
     "formOutput" : {
       "type" : "expression",
       "value" : [
-        "if( $data.pacienteActual ){",
+        "if( $data.reporteFalla ){",
         "\treturn {",
-        "\t\t//map pacienteActual variable to expected task contract input",
-        "\t\tpacienteActualInput: {",
-        "\t\t\tnombreCompleto: $data.pacienteActual.nombreCompleto !== undefined ? $data.pacienteActual.nombreCompleto : null,",
-        "\t\t\tfechaNacimiento: $data.pacienteActual.fechaNacimiento !== undefined ? $data.pacienteActual.fechaNacimiento : null,",
-        "\t\t\tnumeroHistoriaClinica: $data.pacienteActual.numeroHistoriaClinica !== undefined ? $data.pacienteActual.numeroHistoriaClinica : null",
+        "\t\t//map reporteFalla variable to expected task contract input",
+        "\t\treporteFallaInput: {",
+        "\t\t\trequiereReparacion: $data.reporteFalla.requiereReparacion !== undefined ? $data.reporteFalla.requiereReparacion : null",
         "\t\t}",
         "\t}",
         "}"
@@ -592,33 +545,33 @@
       ],
       "exposed" : false
     },
+    "reporteFalla" : {
+      "type" : "url",
+      "value" : [
+        "../{{context.reporteFalla_ref.link}}"
+      ],
+      "exposed" : false
+    },
     "taskId" : {
       "type" : "urlparameter",
       "value" : [
         "id"
       ],
       "exposed" : false
-    },
-    "pacienteActual" : {
-      "type" : "url",
-      "value" : [
-        "../{{context.pacienteActual_ref.link}}"
-      ],
-      "exposed" : false
     }
   },
   "assets" : [
     {
-      "id" : "499c8608-3459-43c0-90b0-26765886bf84",
-      "name" : "localization.json",
-      "type" : "json",
+      "id" : "2e490dc5-737d-4cd7-8451-1deada85145c",
+      "name" : "style.css",
+      "type" : "css",
       "order" : 0,
       "external" : false
     },
     {
-      "id" : "6587f4c8-aa5b-450a-9d15-bd898d88126d",
-      "name" : "style.css",
-      "type" : "css",
+      "id" : "5fe38aaa-4395-4f2b-9ecb-9f6c2115fe96",
+      "name" : "localization.json",
+      "type" : "json",
       "order" : 0,
       "external" : false
     }

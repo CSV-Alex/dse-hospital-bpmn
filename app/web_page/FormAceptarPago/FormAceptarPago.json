@@ -1,10 +1,10 @@
 {
-  "id" : "newForm",
-  "name" : "newForm",
+  "id" : "FormAceptarPago",
+  "name" : "FormAceptarPago",
   "type" : "form",
-  "uuid" : "d47e945a-a268-469a-9254-93e86b6e0520",
+  "uuid" : "f51b214c-1c1d-4b83-a8a1-e1062468e732",
   "modelVersion" : "2.6",
-  "lastUpdate" : 1781535854233,
+  "lastUpdate" : 1782077536583,
   "description" : "Page generated with Bonita UI designer",
   "rows" : [
     [
@@ -14,7 +14,7 @@
           "xs" : 12
         },
         "propertyValues" : { },
-        "reference" : "809872ea-bbc3-4577-a876-cfceaefccd19",
+        "reference" : "943f9f76-e178-40f2-b9a2-4ad8cfcf2222",
         "hasValidationError" : false,
         "id" : "pbContainer",
         "rows" : [
@@ -34,7 +34,7 @@
                 },
                 "level" : {
                   "type" : "constant",
-                  "value" : "Level 1"
+                  "value" : "Level 2"
                 },
                 "cssClasses" : {
                   "type" : "constant",
@@ -42,7 +42,7 @@
                 },
                 "text" : {
                   "type" : "interpolation",
-                  "value" : "{{ task.displayName }}"
+                  "value" : "Aceptar Orden de Pago"
                 },
                 "alignment" : {
                   "type" : "constant",
@@ -51,9 +51,13 @@
                 "dimension" : {
                   "type" : "constant",
                   "value" : 12
+                },
+                "allowHTML" : {
+                  "type" : "constant",
+                  "value" : false
                 }
               },
-              "reference" : "8a77f012-39d9-48c6-84d6-8a138498f348",
+              "reference" : "3b5d4b5b-360e-4781-8b54-35acf0f5a1af",
               "hasValidationError" : false,
               "id" : "pbTitle",
               "description" : ""
@@ -101,7 +105,7 @@
                   "value" : 12
                 }
               },
-              "reference" : "003fefe9-079a-49e8-b090-87996cf2b7d1",
+              "reference" : "9af4d598-32c5-4b06-a85e-3b8fc2a623a4",
               "hasValidationError" : false,
               "id" : "pbText",
               "description" : ""
@@ -117,7 +121,7 @@
           "xs" : 12
         },
         "propertyValues" : { },
-        "reference" : "5c1af070-285d-4949-8c41-88b360a3b11e",
+        "reference" : "177a425b-41cf-4298-b9d3-12ab73631621",
         "hasValidationError" : false,
         "id" : "pbFormContainer",
         "container" : {
@@ -126,7 +130,7 @@
             "xs" : 12
           },
           "propertyValues" : { },
-          "reference" : "85f7d7c2-728a-4e53-9d82-0789bca706a9",
+          "reference" : "6e38f74f-176e-4229-af8b-4fd7d4c47946",
           "hasValidationError" : false,
           "id" : "pbContainer",
           "rows" : [
@@ -154,7 +158,7 @@
                   },
                   "text" : {
                     "type" : "interpolation",
-                    "value" : "Paciente Actual"
+                    "value" : "Orden Pago"
                   },
                   "alignment" : {
                     "type" : "constant",
@@ -165,7 +169,7 @@
                     "value" : 12
                   }
                 },
-                "reference" : "7ff95d4d-6044-44fa-ba96-5a7a0675eb81",
+                "reference" : "341215a3-d9ad-4c2b-ba48-7f5e2c06a7ca",
                 "hasValidationError" : false,
                 "id" : "pbTitle",
                 "description" : ""
@@ -197,7 +201,7 @@
                     "value" : 12
                   }
                 },
-                "reference" : "be57b74b-8946-4108-9d9b-a747d1bfae85",
+                "reference" : "92dd6544-7ace-45fb-83a1-5ff9dc621f93",
                 "hasValidationError" : false,
                 "id" : "pbContainer",
                 "rows" : [
@@ -211,11 +215,39 @@
                         "lg" : 12
                       },
                       "propertyValues" : {
+                        "allowHtml" : {
+                          "type" : "constant",
+                          "value" : true
+                        },
                         "labelHidden" : {
                           "type" : "constant",
                           "value" : false
                         },
                         "hidden" : {
+                          "type" : "expression",
+                          "value" : "!ordenPago_prueba.nombresCompletos"
+                        },
+                        "cssClasses" : {
+                          "type" : "constant",
+                          "value" : ""
+                        },
+                        "label" : {
+                          "type" : "interpolation",
+                          "value" : "Nombres Completos"
+                        },
+                        "text" : {
+                          "type" : "interpolation",
+                          "value" : "{{ordenPago_prueba.nombresCompletos}}"
+                        },
+                        "alignment" : {
+                          "type" : "constant",
+                          "value" : "left"
+                        },
+                        "dimension" : {
+                          "type" : "constant",
+                          "value" : 12
+                        },
+                        "allowHTML" : {
                           "type" : "constant",
                           "value" : false
                         },
@@ -223,45 +255,14 @@
                           "type" : "constant",
                           "value" : "top"
                         },
-                        "cssClasses" : {
-                          "type" : "constant",
-                          "value" : ""
-                        },
                         "labelWidth" : {
                           "type" : "constant",
-                          "value" : 1
-                        },
-                        "readOnly" : {
-                          "type" : "constant",
-                          "value" : false
-                        },
-                        "label" : {
-                          "type" : "interpolation",
-                          "value" : "Nombre Completo"
-                        },
-                        "placeholder" : {
-                          "type" : "constant"
-                        },
-                        "type" : {
-                          "type" : "constant",
-                          "value" : "text"
-                        },
-                        "dimension" : {
-                          "type" : "constant",
-                          "value" : 12
-                        },
-                        "value" : {
-                          "type" : "variable",
-                          "value" : "pacienteActual.nombreCompleto"
-                        },
-                        "required" : {
-                          "type" : "constant",
-                          "value" : false
+                          "value" : 4
                         }
                       },
-                      "reference" : "4834fadb-0394-4a0e-b5f3-004f1abe157d",
+                      "reference" : "06c8249a-63e5-4bed-94a9-b9d9f1a0a1f8",
                       "hasValidationError" : false,
-                      "id" : "pbInput",
+                      "id" : "pbText",
                       "description" : ""
                     }
                   ],
@@ -275,69 +276,54 @@
                         "lg" : 12
                       },
                       "propertyValues" : {
-                        "hidden" : {
+                        "allowHtml" : {
                           "type" : "constant",
-                          "value" : false
-                        },
-                        "dateFormat" : {
-                          "type" : "constant",
-                          "value" : "MM/dd/yyyy"
-                        },
-                        "cssClasses" : {
-                          "type" : "constant",
-                          "value" : ""
-                        },
-                        "labelWidth" : {
-                          "type" : "constant",
-                          "value" : 1
-                        },
-                        "readOnly" : {
-                          "type" : "constant",
-                          "value" : false
-                        },
-                        "label" : {
-                          "type" : "interpolation",
-                          "value" : "Fecha Nacimiento"
-                        },
-                        "type" : {
-                          "type" : "constant"
-                        },
-                        "required" : {
-                          "type" : "constant",
-                          "value" : false
-                        },
-                        "todayLabel" : {
-                          "type" : "constant",
-                          "value" : "Today"
+                          "value" : true
                         },
                         "labelHidden" : {
                           "type" : "constant",
                           "value" : false
                         },
-                        "showToday" : {
-                          "type" : "constant",
-                          "value" : true
+                        "hidden" : {
+                          "type" : "expression",
+                          "value" : "!ordenPago_prueba.tipoExamen"
                         },
-                        "labelPosition" : {
+                        "cssClasses" : {
                           "type" : "constant",
-                          "value" : "top"
+                          "value" : ""
                         },
-                        "placeholder" : {
+                        "label" : {
+                          "type" : "interpolation",
+                          "value" : "Tipo Examen"
+                        },
+                        "text" : {
+                          "type" : "interpolation",
+                          "value" : "{{ordenPago_prueba.tipoExamen}}"
+                        },
+                        "alignment" : {
                           "type" : "constant",
-                          "value" : "Enter a date (mm/dd/yyyy)"
+                          "value" : "left"
                         },
                         "dimension" : {
                           "type" : "constant",
                           "value" : 12
                         },
-                        "value" : {
-                          "type" : "variable",
-                          "value" : "pacienteActual.fechaNacimiento"
+                        "allowHTML" : {
+                          "type" : "constant",
+                          "value" : false
+                        },
+                        "labelPosition" : {
+                          "type" : "constant",
+                          "value" : "top"
+                        },
+                        "labelWidth" : {
+                          "type" : "constant",
+                          "value" : 4
                         }
                       },
-                      "reference" : "69d03702-3c3c-4682-8bda-44c766244152",
+                      "reference" : "01475853-0634-48f5-9561-756bd2192766",
                       "hasValidationError" : false,
-                      "id" : "pbDatePicker",
+                      "id" : "pbText",
                       "description" : ""
                     }
                   ],
@@ -356,35 +342,20 @@
                           "value" : false
                         },
                         "hidden" : {
-                          "type" : "constant",
-                          "value" : false
-                        },
-                        "labelPosition" : {
-                          "type" : "constant",
-                          "value" : "top"
+                          "type" : "expression",
+                          "value" : "!ordenPago_prueba.tieneSIS"
                         },
                         "cssClasses" : {
                           "type" : "constant",
                           "value" : ""
                         },
-                        "labelWidth" : {
+                        "disabled" : {
                           "type" : "constant",
-                          "value" : 1
-                        },
-                        "readOnly" : {
-                          "type" : "constant",
-                          "value" : false
+                          "value" : true
                         },
                         "label" : {
                           "type" : "interpolation",
-                          "value" : "Numero Historia Clinica"
-                        },
-                        "placeholder" : {
-                          "type" : "constant"
-                        },
-                        "type" : {
-                          "type" : "constant",
-                          "value" : "text"
+                          "value" : "Tiene S I S"
                         },
                         "dimension" : {
                           "type" : "constant",
@@ -392,16 +363,183 @@
                         },
                         "value" : {
                           "type" : "variable",
-                          "value" : "pacienteActual.numeroHistoriaClinica"
+                          "value" : "ordenPago_prueba.tieneSIS"
                         },
                         "required" : {
                           "type" : "constant",
-                          "value" : true
+                          "value" : false
+                        },
+                        "allowHTML" : {
+                          "type" : "constant",
+                          "value" : false
                         }
                       },
-                      "reference" : "ca8cfcbd-d6c9-4be8-a9ab-fda5b0ca897f",
+                      "reference" : "bfdbec20-6370-4d7c-9800-fa6fa815b44f",
                       "hasValidationError" : false,
-                      "id" : "pbInput",
+                      "id" : "pbCheckbox",
+                      "description" : ""
+                    }
+                  ],
+                  [
+                    {
+                      "type" : "component",
+                      "dimension" : {
+                        "md" : 12,
+                        "sm" : 12,
+                        "xs" : 12,
+                        "lg" : 12
+                      },
+                      "propertyValues" : {
+                        "allowHtml" : {
+                          "type" : "constant",
+                          "value" : true
+                        },
+                        "labelHidden" : {
+                          "type" : "constant",
+                          "value" : false
+                        },
+                        "hidden" : {
+                          "type" : "expression",
+                          "value" : "!ordenPago_prueba.idUser"
+                        },
+                        "cssClasses" : {
+                          "type" : "constant",
+                          "value" : ""
+                        },
+                        "label" : {
+                          "type" : "interpolation",
+                          "value" : "Id User"
+                        },
+                        "text" : {
+                          "type" : "interpolation",
+                          "value" : "{{ordenPago_prueba.idUser}}"
+                        },
+                        "alignment" : {
+                          "type" : "constant",
+                          "value" : "left"
+                        },
+                        "dimension" : {
+                          "type" : "constant",
+                          "value" : 12
+                        },
+                        "allowHTML" : {
+                          "type" : "constant",
+                          "value" : false
+                        },
+                        "labelPosition" : {
+                          "type" : "constant",
+                          "value" : "top"
+                        },
+                        "labelWidth" : {
+                          "type" : "constant",
+                          "value" : 4
+                        }
+                      },
+                      "reference" : "4bc1cb7b-2bab-441b-8b33-bb782aeadeb8",
+                      "hasValidationError" : false,
+                      "id" : "pbText",
+                      "description" : ""
+                    }
+                  ],
+                  [
+                    {
+                      "type" : "component",
+                      "dimension" : {
+                        "md" : 12,
+                        "sm" : 12,
+                        "xs" : 12,
+                        "lg" : 12
+                      },
+                      "propertyValues" : {
+                        "allowHtml" : {
+                          "type" : "constant",
+                          "value" : true
+                        },
+                        "labelHidden" : {
+                          "type" : "constant",
+                          "value" : false
+                        },
+                        "hidden" : {
+                          "type" : "expression",
+                          "value" : "!ordenPago.costo"
+                        },
+                        "cssClasses" : {
+                          "type" : "constant",
+                          "value" : ""
+                        },
+                        "label" : {
+                          "type" : "interpolation",
+                          "value" : "Costo"
+                        },
+                        "text" : {
+                          "type" : "interpolation",
+                          "value" : "{{ordenPago.costo}}"
+                        },
+                        "alignment" : {
+                          "type" : "constant",
+                          "value" : "left"
+                        },
+                        "dimension" : {
+                          "type" : "constant",
+                          "value" : 12
+                        }
+                      },
+                      "reference" : "31e8bb80-1a6a-4d50-b530-712eb596f56c",
+                      "hasValidationError" : false,
+                      "id" : "pbText",
+                      "description" : ""
+                    }
+                  ],
+                  [
+                    {
+                      "type" : "component",
+                      "dimension" : {
+                        "md" : 12,
+                        "sm" : 12,
+                        "xs" : 12,
+                        "lg" : 12
+                      },
+                      "propertyValues" : {
+                        "labelHidden" : {
+                          "type" : "constant",
+                          "value" : false
+                        },
+                        "hidden" : {
+                          "type" : "constant",
+                          "value" : false
+                        },
+                        "cssClasses" : {
+                          "type" : "constant",
+                          "value" : ""
+                        },
+                        "disabled" : {
+                          "type" : "constant",
+                          "value" : false
+                        },
+                        "label" : {
+                          "type" : "interpolation",
+                          "value" : "¿Pago Realizado?"
+                        },
+                        "dimension" : {
+                          "type" : "constant",
+                          "value" : 12
+                        },
+                        "value" : {
+                          "type" : "variable",
+                          "value" : "ordenPago.pago"
+                        },
+                        "required" : {
+                          "type" : "constant",
+                          "value" : false
+                        },
+                        "allowHTML" : {
+                          "type" : "constant",
+                          "value" : false
+                        }
+                      },
+                      "reference" : "a0bbb892-8552-40c8-8663-ae2bdec3e7a2",
+                      "hasValidationError" : false,
+                      "id" : "pbCheckbox",
                       "description" : ""
                     }
                   ]
@@ -481,9 +619,30 @@
                   "dimension" : {
                     "type" : "constant",
                     "value" : 12
+                  },
+                  "assign" : {
+                    "type" : "constant",
+                    "value" : false
+                  },
+                  "url" : {
+                    "type" : "interpolation"
+                  },
+                  "responseStatusCode" : {
+                    "type" : "variable"
+                  },
+                  "dataFromSuccess" : {
+                    "type" : "variable"
+                  },
+                  "closeOnSuccess" : {
+                    "type" : "constant",
+                    "value" : false
+                  },
+                  "modalId" : {
+                    "type" : "constant",
+                    "value" : ""
                   }
                 },
-                "reference" : "0b33e66b-ebc5-40b0-a3bb-5df3d86937b4",
+                "reference" : "1e173863-ee11-4d0f-840a-af6b4d2cab33",
                 "hasValidationError" : false,
                 "id" : "pbButton",
                 "description" : ""
@@ -535,7 +694,7 @@
                     "value" : 12
                   }
                 },
-                "reference" : "42c813e4-aa95-409a-95df-36c058df6e64",
+                "reference" : "27893e3f-54d7-457e-93a4-295435b52a52",
                 "hasValidationError" : false,
                 "id" : "pbText",
                 "description" : ""
@@ -572,13 +731,13 @@
     "formOutput" : {
       "type" : "expression",
       "value" : [
-        "if( $data.pacienteActual ){",
+        "if( $data.ordenPago && $data.ordenPago_prueba ){",
+        "\t//attach lazy references variables to parent variables",
+        "\t$data.ordenPago.prueba = $data.ordenPago_prueba;",
         "\treturn {",
-        "\t\t//map pacienteActual variable to expected task contract input",
-        "\t\tpacienteActualInput: {",
-        "\t\t\tnombreCompleto: $data.pacienteActual.nombreCompleto !== undefined ? $data.pacienteActual.nombreCompleto : null,",
-        "\t\t\tfechaNacimiento: $data.pacienteActual.fechaNacimiento !== undefined ? $data.pacienteActual.fechaNacimiento : null,",
-        "\t\t\tnumeroHistoriaClinica: $data.pacienteActual.numeroHistoriaClinica !== undefined ? $data.pacienteActual.numeroHistoriaClinica : null",
+        "\t\t//map ordenPago variable to expected task contract input",
+        "\t\tordenPagoInput: {",
+        "\t\t\tpago: $data.ordenPago.pago !== undefined ? $data.ordenPago.pago : null",
         "\t\t}",
         "\t}",
         "}"
@@ -592,31 +751,38 @@
       ],
       "exposed" : false
     },
+    "ordenPago" : {
+      "type" : "url",
+      "value" : [
+        "../{{context.ordenPago_ref.link}}"
+      ],
+      "exposed" : false
+    },
+    "ordenPago_prueba" : {
+      "type" : "url",
+      "value" : [
+        "{{ordenPago|lazyRef:'prueba'}}"
+      ],
+      "exposed" : false
+    },
     "taskId" : {
       "type" : "urlparameter",
       "value" : [
         "id"
       ],
       "exposed" : false
-    },
-    "pacienteActual" : {
-      "type" : "url",
-      "value" : [
-        "../{{context.pacienteActual_ref.link}}"
-      ],
-      "exposed" : false
     }
   },
   "assets" : [
     {
-      "id" : "499c8608-3459-43c0-90b0-26765886bf84",
+      "id" : "c63244c2-f9b7-49ab-8d5f-88b66cb054fc",
       "name" : "localization.json",
       "type" : "json",
       "order" : 0,
       "external" : false
     },
     {
-      "id" : "6587f4c8-aa5b-450a-9d15-bd898d88126d",
+      "id" : "3b528620-52b0-4b49-ba41-e38eee641349",
       "name" : "style.css",
       "type" : "css",
       "order" : 0,
