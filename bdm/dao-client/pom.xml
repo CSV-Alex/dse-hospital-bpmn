@@ -3,15 +3,15 @@
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <modelVersion>4.0.0</modelVersion>
   <parent>
-    <groupId>com.company</groupId>
-    <artifactId>pract3-bdm-parent</artifactId>
+    <groupId>com.hospital</groupId>
+    <artifactId>hospital-bpmn-bdm-parent</artifactId>
     <version>0.0.1</version>
   </parent>
-  <artifactId>pract3-bdm-dao-client</artifactId>
+  <artifactId>hospital-bpmn-bdm-dao-client</artifactId>
   <dependencies>
     <dependency>
       <groupId>${project.groupId}</groupId>
-      <artifactId>pract3-bdm-model</artifactId>
+      <artifactId>hospital-bpmn-bdm-model</artifactId>
       <version>${project.version}</version>
     </dependency>
     <dependency>
