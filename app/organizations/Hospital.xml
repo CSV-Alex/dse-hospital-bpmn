@@ -7,6 +7,7 @@
       <lastName>Jobs</lastName>
       <title>Mr</title>
       <jobTitle>Chief Executive Officer</jobTitle>
+      <manager></manager>
       <personalData/>
       <professionalData>
         <email>william.jobs@acme.com</email>
@@ -30,7 +31,7 @@
     <user userName="karla.quispe">
       <firstName>Karla</firstName>
       <lastName>Quispe</lastName>
-      <manager></manager>
+      <manager>john.doe</manager>
       <personalData/>
       <professionalData/>
       <password encrypted="false">123</password>
@@ -55,10 +56,10 @@
     <user userName="jair.torres">
       <firstName>Jair</firstName>
       <lastName>Torres</lastName>
-	  <personalData/>
-	  <professionalData/>
-	  <password encrypted="false">bpm</password>
-	  <customUserInfoValues/>
+      <personalData/>
+      <professionalData/>
+      <password encrypted="false">bpm</password>
+      <customUserInfoValues/>
     </user>
     <user userName="nicolas.contrerin">
       <firstName>Nicolas</firstName>
@@ -92,6 +93,30 @@
       <password encrypted="false">bpm</password>
       <customUserInfoValues/>
     </user>
+    <user userName="neo">
+      <firstName>Thomas</firstName>
+      <lastName>Anderson</lastName>
+      <personalData/>
+      <professionalData/>
+      <password encrypted="false">bpm</password>
+      <customUserInfoValues/>
+    </user>
+    <user userName="andrew.hayes">
+      <firstName>Andrew</firstName>
+      <lastName>Hayes</lastName>
+      <personalData/>
+      <professionalData/>
+      <password encrypted="false">bpm</password>
+      <customUserInfoValues/>
+    </user>
+    <user userName="maggie.tatcher">
+      <firstName>Maggie</firstName>
+      <lastName>Tatcher</lastName>
+      <personalData/>
+      <professionalData/>
+      <password encrypted="false">bpm</password>
+      <customUserInfoValues/>
+    </user>
   </users>
   <roles>
     <role name="member">
@@ -101,14 +126,23 @@
     <role name="medicoTratante">
       <displayName>MedicoTratante</displayName>
     </role>
-	<role name="Tecnico">
-		<displayName>Tecnico</displayName>
-	</role>
+    <role name="Tecnico">
+      <displayName>Tecnico</displayName>
+    </role>
     <role name="operadorEquipos">
       <displayName>Operador</displayName>
     </role>
     <role name="tecnicoEquipos">
       <displayName>Tecnico</displayName>
+    </role>
+    <role name="logistics_dir">
+      <displayName>director_logistica</displayName>
+    </role>
+    <role name="nursing_dir">
+      <displayName>jefe_enfermeria</displayName>
+    </role>
+    <role name="comms_dir">
+      <displayName>director_comunicaciones</displayName>
     </role>
   </roles>
   <groups>
@@ -124,14 +158,20 @@
     <group name="Ofi. Econom&#xed;a" parentPath="/Hospital">
       <displayName>Ofi. Econom&#xed;a</displayName>
     </group>
-	<group name="Depto. Patolog&#xed;a" parentPath="/Hospital">
+    <group name="Depto. Patolog&#xed;a" parentPath="/Hospital">
       <displayName>Depto. Patolog&#xed;a</displayName>
-	</group>
+    </group>
     <group name="operadores" parentPath="/Hospital">
       <displayName>Operadores</displayName>
     </group>
     <group name="tecnicos" parentPath="/Hospital">
       <displayName>Tecnicos</displayName>
+    </group>
+    <group name="logistics" parentPath="/Hospital">
+      <displayName>Of. Logistica</displayName>
+    </group>
+    <group name="comms" parentPath="/Hospital">
+      <displayName>Of. Comunicaciones</displayName>
     </group>
   </groups>
   <memberships>
@@ -214,6 +254,39 @@
       <userName>william.jobs</userName>
       <roleName>member</roleName>
       <groupName>tecnicos</groupName>
+      <groupParentPath>/Hospital</groupParentPath>
+    </membership>
+    <membership>
+      <userName>neo</userName>
+      <roleName>member</roleName>
+      <groupName>Hospital</groupName>
+    </membership>
+    <membership>
+      <userName>neo</userName>
+      <roleName>logistics_dir</roleName>
+      <groupName>logistics</groupName>
+      <groupParentPath>/Hospital</groupParentPath>
+    </membership>
+    <membership>
+      <userName>andrew.hayes</userName>
+      <roleName>member</roleName>
+      <groupName>Hospital</groupName>
+    </membership>
+    <membership>
+      <userName>andrew.hayes</userName>
+      <roleName>comms_dir</roleName>
+      <groupName>comms</groupName>
+      <groupParentPath>/Hospital</groupParentPath>
+    </membership>
+    <membership>
+      <userName>maggie.tatcher</userName>
+      <roleName>member</roleName>
+      <groupName>Hospital</groupName>
+    </membership>
+    <membership>
+      <userName>maggie.tatcher</userName>
+      <roleName>nursing_dir</roleName>
+      <groupName>enfermeria</groupName>
       <groupParentPath>/Hospital</groupParentPath>
     </membership>
   </memberships>

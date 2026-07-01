@@ -46,6 +46,31 @@
             <queries/>
             <indexes/>
         </businessObject>
+        <businessObject qualifiedName="com.company.model.ReporteCampaign">
+            <fields>
+                <field type="STRING" length="255" name="encargado" nullable="true" collection="false"/>
+                <field type="LOCALDATETIME" length="255" name="hora_Inicio" nullable="true" collection="false"/>
+                <field type="LOCALDATETIME" length="255" name="hora_Final" nullable="true" collection="false"/>
+                <field type="INTEGER" length="255" name="vacunados" nullable="true" collection="false"/>
+                <field type="BOOLEAN" length="255" name="completed" nullable="true" collection="false"/>
+            </fields>
+            <uniqueConstraints/>
+            <queries/>
+            <indexes/>
+        </businessObject>
+        <businessObject qualifiedName="com.company.model.Solicitud">
+            <fields>
+                <field type="STRING" length="255" name="distrito" nullable="true" collection="false"/>
+                <field type="LOCALDATE" length="255" name="fecha" nullable="true" collection="false"/>
+                <field type="INTEGER" length="255" name="qty" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="encargadoCampaign" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="encargadoMaterial" nullable="true" collection="false"/>
+                <field type="BOOLEAN" length="255" name="approved" nullable="true" collection="false"/>
+            </fields>
+            <uniqueConstraints/>
+            <queries/>
+            <indexes/>
+        </businessObject>
         <businessObject qualifiedName="com.hospital.model.OrdenPago">
             <fields>
                 <field type="FLOAT" length="255" name="costo" nullable="false" collection="false"/>
