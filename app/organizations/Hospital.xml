@@ -50,7 +50,7 @@
       <lastName>Doe</lastName>
       <personalData/>
       <professionalData/>
-      <password encrypted="false">bpm</password>
+      <password encrypted="false">123</password>
       <customUserInfoValues/>
     </user>
     <user userName="jair.torres">
@@ -66,7 +66,7 @@
       <lastName>Contreras</lastName>
       <personalData/>
       <professionalData/>
-      <password encrypted="false">bpm</password>
+      <password encrypted="false">123</password>
       <customUserInfoValues/>
     </user>
     <user userName="miguel.quispe">
@@ -133,7 +133,7 @@
       <displayName>Operador</displayName>
     </role>
     <role name="tecnicoEquipos">
-      <displayName>Tecnico</displayName>
+      <displayName>TecnicoReparacion</displayName>
     </role>
     <role name="logistics_dir">
       <displayName>director_logistica</displayName>

@@ -13,9 +13,7 @@
           <dynamicDescription xmi:type="expression:Expression" xmi:id="_LIHjWWszEfGfqcq0fL0KUg" name="" content="" returnTypeFixed="true"/>
           <stepSummary xmi:type="expression:Expression" xmi:id="_LIHjWmszEfGfqcq0fL0KUg" name="" content="" returnTypeFixed="true"/>
           <operations xmi:type="expression:Operation" xmi:id="_IqXxs2s3EfGfqcq0fL0KUg">
-            <leftOperand xmi:type="expression:Expression" xmi:id="_IqXxtGs3EfGfqcq0fL0KUg" name="solicitud" content="solicitud" type="TYPE_VARIABLE" returnType="com.company.model.Solicitud">
-              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_IqXxtWs3EfGfqcq0fL0KUg" name="solicitud" dataType="_LIIKZGszEfGfqcq0fL0KUg" className="com.company.model.Solicitud"/>
-            </leftOperand>
+            <leftOperand xmi:type="expression:Expression" xmi:id="_IqXxtGs3EfGfqcq0fL0KUg" name="" content=""/>
             <rightOperand xmi:type="expression:Expression" xmi:id="_IqXxtms3EfGfqcq0fL0KUg" name="solicitudInput.distrito" content="solicitudInput?.distrito" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT">
               <referencedElements xmi:type="process:ContractInput" xmi:id="_IqXxt2s3EfGfqcq0fL0KUg" name="solicitudInput" type="COMPLEX" createMode="false"/>
             </rightOperand>
@@ -24,9 +22,7 @@
             </operator>
           </operations>
           <operations xmi:type="expression:Operation" xmi:id="_IqXxuWs3EfGfqcq0fL0KUg">
-            <leftOperand xmi:type="expression:Expression" xmi:id="_IqXxums3EfGfqcq0fL0KUg" name="solicitud" content="solicitud" type="TYPE_VARIABLE" returnType="com.company.model.Solicitud">
-              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_IqXxu2s3EfGfqcq0fL0KUg" name="solicitud" dataType="_LIIKZGszEfGfqcq0fL0KUg" className="com.company.model.Solicitud"/>
-            </leftOperand>
+            <leftOperand xmi:type="expression:Expression" xmi:id="_IqXxums3EfGfqcq0fL0KUg" name="" content=""/>
             <rightOperand xmi:type="expression:Expression" xmi:id="_IqXxvGs3EfGfqcq0fL0KUg" name="solicitudInput.fecha" content="solicitudInput?.fecha" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.time.LocalDate">
               <referencedElements xmi:type="process:ContractInput" xmi:id="_IqXxvWs3EfGfqcq0fL0KUg" name="solicitudInput" type="COMPLEX" createMode="false"/>
             </rightOperand>
@@ -43,7 +39,7 @@
             <targetForm xmi:type="expression:Expression" xmi:id="_KTVTkGs3EfGfqcq0fL0KUg" name="VacineProposal" content="9fe0a68f-f26d-4d6e-ba25-fda5aa5669f9" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
           </formMapping>
           <contract xmi:type="process:Contract" xmi:id="_LIHjYmszEfGfqcq0fL0KUg">
-            <inputs xmi:type="process:ContractInput" xmi:id="_IqXxsGs3EfGfqcq0fL0KUg" name="solicitudInput" type="COMPLEX" dataReference="solicitud" createMode="false">
+            <inputs xmi:type="process:ContractInput" xmi:id="_IqXxsGs3EfGfqcq0fL0KUg" name="solicitudInput" type="COMPLEX" createMode="false">
               <inputs xmi:type="process:ContractInput" xmi:id="_IqXxsWs3EfGfqcq0fL0KUg" name="distrito" createMode="false"/>
               <inputs xmi:type="process:ContractInput" xmi:id="_IqXxsms3EfGfqcq0fL0KUg" name="fecha" type="LOCALDATE" createMode="false"/>
             </inputs>
@@ -65,9 +61,7 @@
           <dynamicDescription xmi:type="expression:Expression" xmi:id="_S43Q4Ws1EfGfqcq0fL0KUg" name="" content="" returnTypeFixed="true"/>
           <stepSummary xmi:type="expression:Expression" xmi:id="_S43Q42s1EfGfqcq0fL0KUg" name="" content="" returnTypeFixed="true"/>
           <operations xmi:type="expression:Operation" xmi:id="_ShQnEG9EEfGWI56F-xELRg">
-            <leftOperand xmi:type="expression:Expression" xmi:id="_ShQnEW9EEfGWI56F-xELRg" name="solicitud" content="solicitud" type="TYPE_VARIABLE" returnType="com.company.model.Solicitud">
-              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_ShQnEm9EEfGWI56F-xELRg" name="solicitud" dataType="_LIIKZGszEfGfqcq0fL0KUg" className="com.company.model.Solicitud"/>
-            </leftOperand>
+            <leftOperand xmi:type="expression:Expression" xmi:id="_ShQnEW9EEfGWI56F-xELRg" name="" content=""/>
             <rightOperand xmi:type="expression:Expression" xmi:id="_ShQnE29EEfGWI56F-xELRg" name="solicitudInput.fecha" content="solicitudInput?.fecha" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.time.LocalDate">
               <referencedElements xmi:type="process:ContractInput" xmi:id="_ShQnFG9EEfGWI56F-xELRg" name="solicitudInput" type="COMPLEX" createMode="false"/>
             </rightOperand>
@@ -76,9 +70,7 @@
             </operator>
           </operations>
           <operations xmi:type="expression:Operation" xmi:id="_ShQnFm9EEfGWI56F-xELRg">
-            <leftOperand xmi:type="expression:Expression" xmi:id="_ShQnF29EEfGWI56F-xELRg" name="solicitud" content="solicitud" type="TYPE_VARIABLE" returnType="com.company.model.Solicitud">
-              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_ShQnGG9EEfGWI56F-xELRg" name="solicitud" dataType="_LIIKZGszEfGfqcq0fL0KUg" className="com.company.model.Solicitud"/>
-            </leftOperand>
+            <leftOperand xmi:type="expression:Expression" xmi:id="_ShQnF29EEfGWI56F-xELRg" name="" content=""/>
             <rightOperand xmi:type="expression:Expression" xmi:id="_ShQnGW9EEfGWI56F-xELRg" name="solicitudInput.encargadoMaterial" content="solicitudInput?.encargadoMaterial" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT">
               <referencedElements xmi:type="process:ContractInput" xmi:id="_ShQnGm9EEfGWI56F-xELRg" name="solicitudInput" type="COMPLEX" createMode="false"/>
             </rightOperand>
@@ -87,9 +79,7 @@
             </operator>
           </operations>
           <operations xmi:type="expression:Operation" xmi:id="_ShQnHG9EEfGWI56F-xELRg">
-            <leftOperand xmi:type="expression:Expression" xmi:id="_ShQnHW9EEfGWI56F-xELRg" name="solicitud" content="solicitud" type="TYPE_VARIABLE" returnType="com.company.model.Solicitud">
-              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_ShQnHm9EEfGWI56F-xELRg" name="solicitud" dataType="_LIIKZGszEfGfqcq0fL0KUg" className="com.company.model.Solicitud"/>
-            </leftOperand>
+            <leftOperand xmi:type="expression:Expression" xmi:id="_ShQnHW9EEfGWI56F-xELRg" name="" content=""/>
             <rightOperand xmi:type="expression:Expression" xmi:id="_ShQnH29EEfGWI56F-xELRg" name="solicitudInput.qty" content="solicitudInput?.qty" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.lang.Integer">
               <referencedElements xmi:type="process:ContractInput" xmi:id="_ShQnIG9EEfGWI56F-xELRg" name="solicitudInput" type="COMPLEX" createMode="false"/>
             </rightOperand>
@@ -106,7 +96,7 @@
             <targetForm xmi:type="expression:Expression" xmi:id="_Vtq4sG9EEfGWI56F-xELRg" name="vacineInventoryRequest" content="fa27b0f0-843c-43a7-ad2e-b643e4debf44" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
           </formMapping>
           <contract xmi:type="process:Contract" xmi:id="_S43Q6Ws1EfGfqcq0fL0KUg">
-            <inputs xmi:type="process:ContractInput" xmi:id="_ShQAAG9EEfGWI56F-xELRg" name="solicitudInput" type="COMPLEX" dataReference="solicitud" createMode="false">
+            <inputs xmi:type="process:ContractInput" xmi:id="_ShQAAG9EEfGWI56F-xELRg" name="solicitudInput" type="COMPLEX" createMode="false">
               <inputs xmi:type="process:ContractInput" xmi:id="_ShQAAW9EEfGWI56F-xELRg" name="fecha" type="LOCALDATE" createMode="false"/>
               <inputs xmi:type="process:ContractInput" xmi:id="_ShQAAm9EEfGWI56F-xELRg" name="encargadoMaterial" createMode="false"/>
               <inputs xmi:type="process:ContractInput" xmi:id="_ShQAA29EEfGWI56F-xELRg" name="qty" type="INTEGER" createMode="false"/>
@@ -119,9 +109,7 @@
           <dynamicDescription xmi:type="expression:Expression" xmi:id="_9koo0Gs1EfGfqcq0fL0KUg" name="" content="" returnTypeFixed="true"/>
           <stepSummary xmi:type="expression:Expression" xmi:id="_9koo0ms1EfGfqcq0fL0KUg" name="" content="" returnTypeFixed="true"/>
           <operations xmi:type="expression:Operation" xmi:id="_ZEvw8G8-EfGWI56F-xELRg">
-            <leftOperand xmi:type="expression:Expression" xmi:id="_ZEvw8W8-EfGWI56F-xELRg" name="campaign_report" content="campaign_report" type="TYPE_VARIABLE" returnType="com.company.model.ReporteCampaign">
-              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_ZEvw8m8-EfGWI56F-xELRg" name="campaign_report" dataType="_LIIKZGszEfGfqcq0fL0KUg" className="com.company.model.ReporteCampaign"/>
-            </leftOperand>
+            <leftOperand xmi:type="expression:Expression" xmi:id="_ZEvw8W8-EfGWI56F-xELRg" name="" content=""/>
             <rightOperand xmi:type="expression:Expression" xmi:id="_ZEvw828-EfGWI56F-xELRg" name="campaign_reportInput.completed" content="campaign_reportInput?.completed" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.lang.Boolean">
               <referencedElements xmi:type="process:ContractInput" xmi:id="_ZEvw9G8-EfGWI56F-xELRg" name="campaign_reportInput" type="COMPLEX" createMode="false"/>
             </rightOperand>
@@ -130,9 +118,7 @@
             </operator>
           </operations>
           <operations xmi:type="expression:Operation" xmi:id="_abxOQm8-EfGWI56F-xELRg">
-            <leftOperand xmi:type="expression:Expression" xmi:id="_abxOQ28-EfGWI56F-xELRg" name="solicitud" content="solicitud" type="TYPE_VARIABLE" returnType="com.company.model.Solicitud">
-              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_abxORG8-EfGWI56F-xELRg" name="solicitud" dataType="_LIIKZGszEfGfqcq0fL0KUg" className="com.company.model.Solicitud"/>
-            </leftOperand>
+            <leftOperand xmi:type="expression:Expression" xmi:id="_abxOQ28-EfGWI56F-xELRg" name="" content=""/>
             <rightOperand xmi:type="expression:Expression" xmi:id="_abxORW8-EfGWI56F-xELRg" name="solicitudInput.approved" content="solicitudInput?.approved" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.lang.Boolean">
               <referencedElements xmi:type="process:ContractInput" xmi:id="_abxORm8-EfGWI56F-xELRg" name="solicitudInput" type="COMPLEX" createMode="false"/>
             </rightOperand>
@@ -149,10 +135,10 @@
             <targetForm xmi:type="expression:Expression" xmi:id="_bORpQG8-EfGWI56F-xELRg" name="VacineReturn" content="1975091d-b4f5-4d7d-a320-21ecdac42a40" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
           </formMapping>
           <contract xmi:type="process:Contract" xmi:id="_-AHq-Gs1EfGfqcq0fL0KUg">
-            <inputs xmi:type="process:ContractInput" xmi:id="_ZEvJ4G8-EfGWI56F-xELRg" name="campaign_reportInput" type="COMPLEX" dataReference="campaign_report" createMode="false">
+            <inputs xmi:type="process:ContractInput" xmi:id="_ZEvJ4G8-EfGWI56F-xELRg" name="campaign_reportInput" type="COMPLEX" createMode="false">
               <inputs xmi:type="process:ContractInput" xmi:id="_ZEvJ4W8-EfGWI56F-xELRg" name="completed" type="BOOLEAN" createMode="false"/>
             </inputs>
-            <inputs xmi:type="process:ContractInput" xmi:id="_abxOQG8-EfGWI56F-xELRg" name="solicitudInput" type="COMPLEX" dataReference="solicitud" createMode="false">
+            <inputs xmi:type="process:ContractInput" xmi:id="_abxOQG8-EfGWI56F-xELRg" name="solicitudInput" type="COMPLEX" createMode="false">
               <inputs xmi:type="process:ContractInput" xmi:id="_abxOQW8-EfGWI56F-xELRg" name="approved" type="BOOLEAN" createMode="false"/>
             </inputs>
           </contract>
@@ -170,9 +156,7 @@
           <dynamicDescription xmi:type="expression:Expression" xmi:id="_Vhb1oGs1EfGfqcq0fL0KUg" name="" content="" returnTypeFixed="true"/>
           <stepSummary xmi:type="expression:Expression" xmi:id="_Vhb1oms1EfGfqcq0fL0KUg" name="" content="" returnTypeFixed="true"/>
           <operations xmi:type="expression:Operation" xmi:id="_TMiHwG87EfGWI56F-xELRg">
-            <leftOperand xmi:type="expression:Expression" xmi:id="_TMiHwW87EfGWI56F-xELRg" name="solicitud" content="solicitud" type="TYPE_VARIABLE" returnType="com.company.model.Solicitud">
-              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_TMiHwm87EfGWI56F-xELRg" name="solicitud" dataType="_LIIKZGszEfGfqcq0fL0KUg" className="com.company.model.Solicitud"/>
-            </leftOperand>
+            <leftOperand xmi:type="expression:Expression" xmi:id="_TMiHwW87EfGWI56F-xELRg" name="" content=""/>
             <rightOperand xmi:type="expression:Expression" xmi:id="_TMiHw287EfGWI56F-xELRg" name="solicitudInput.distrito" content="solicitudInput?.distrito" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT">
               <referencedElements xmi:type="process:ContractInput" xmi:id="_TMiHxG87EfGWI56F-xELRg" name="solicitudInput" type="COMPLEX" createMode="false"/>
             </rightOperand>
@@ -181,9 +165,7 @@
             </operator>
           </operations>
           <operations xmi:type="expression:Operation" xmi:id="_TMiHxm87EfGWI56F-xELRg">
-            <leftOperand xmi:type="expression:Expression" xmi:id="_TMiHx287EfGWI56F-xELRg" name="solicitud" content="solicitud" type="TYPE_VARIABLE" returnType="com.company.model.Solicitud">
-              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_TMiHyG87EfGWI56F-xELRg" name="solicitud" dataType="_LIIKZGszEfGfqcq0fL0KUg" className="com.company.model.Solicitud"/>
-            </leftOperand>
+            <leftOperand xmi:type="expression:Expression" xmi:id="_TMiHx287EfGWI56F-xELRg" name="" content=""/>
             <rightOperand xmi:type="expression:Expression" xmi:id="_TMiHyW87EfGWI56F-xELRg" name="solicitudInput.fecha" content="solicitudInput?.fecha" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.time.LocalDate">
               <referencedElements xmi:type="process:ContractInput" xmi:id="_TMiHym87EfGWI56F-xELRg" name="solicitudInput" type="COMPLEX" createMode="false"/>
             </rightOperand>
@@ -200,7 +182,7 @@
             <targetForm xmi:type="expression:Expression" xmi:id="_VqO5QG87EfGWI56F-xELRg" name="VacineDiffusion" content="56bafb79-7fa0-4d24-8cc1-ba343aa0058b" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
           </formMapping>
           <contract xmi:type="process:Contract" xmi:id="_Vhb1qGs1EfGfqcq0fL0KUg">
-            <inputs xmi:type="process:ContractInput" xmi:id="_TMhgsG87EfGWI56F-xELRg" name="solicitudInput" type="COMPLEX" dataReference="solicitud" createMode="false">
+            <inputs xmi:type="process:ContractInput" xmi:id="_TMhgsG87EfGWI56F-xELRg" name="solicitudInput" type="COMPLEX" createMode="false">
               <inputs xmi:type="process:ContractInput" xmi:id="_TMhgsW87EfGWI56F-xELRg" name="distrito" createMode="false"/>
               <inputs xmi:type="process:ContractInput" xmi:id="_TMhgsm87EfGWI56F-xELRg" name="fecha" type="LOCALDATE" createMode="false"/>
             </inputs>
@@ -214,9 +196,7 @@
           <dynamicDescription xmi:type="expression:Expression" xmi:id="_XrwYIWs1EfGfqcq0fL0KUg" name="" content="" returnTypeFixed="true"/>
           <stepSummary xmi:type="expression:Expression" xmi:id="_XrwYI2s1EfGfqcq0fL0KUg" name="" content="" returnTypeFixed="true"/>
           <operations xmi:type="expression:Operation" xmi:id="_kovw4G9EEfGWI56F-xELRg">
-            <leftOperand xmi:type="expression:Expression" xmi:id="_kovw4W9EEfGWI56F-xELRg" name="solicitud" content="solicitud" type="TYPE_VARIABLE" returnType="com.company.model.Solicitud">
-              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_kowX8G9EEfGWI56F-xELRg" name="solicitud" dataType="_LIIKZGszEfGfqcq0fL0KUg" className="com.company.model.Solicitud"/>
-            </leftOperand>
+            <leftOperand xmi:type="expression:Expression" xmi:id="_kovw4W9EEfGWI56F-xELRg" name="" content=""/>
             <rightOperand xmi:type="expression:Expression" xmi:id="_kowX8W9EEfGWI56F-xELRg" name="solicitudInput.encargadoCampaign" content="solicitudInput?.encargadoCampaign" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT">
               <referencedElements xmi:type="process:ContractInput" xmi:id="_kowX8m9EEfGWI56F-xELRg" name="solicitudInput" type="COMPLEX" createMode="false"/>
             </rightOperand>
@@ -233,7 +213,7 @@
             <targetForm xmi:type="expression:Expression" xmi:id="_ngmu0G9EEfGWI56F-xELRg" name="VacineEncargado" content="2f86e27a-ea29-4672-9ff5-0bed94fee87d" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
           </formMapping>
           <contract xmi:type="process:Contract" xmi:id="_XrwYKWs1EfGfqcq0fL0KUg">
-            <inputs xmi:type="process:ContractInput" xmi:id="_kovJ0G9EEfGWI56F-xELRg" name="solicitudInput" type="COMPLEX" dataReference="solicitud" createMode="false">
+            <inputs xmi:type="process:ContractInput" xmi:id="_kovJ0G9EEfGWI56F-xELRg" name="solicitudInput" type="COMPLEX" createMode="false">
               <inputs xmi:type="process:ContractInput" xmi:id="_kovJ0W9EEfGWI56F-xELRg" name="encargadoCampaign" createMode="false"/>
             </inputs>
           </contract>
@@ -249,9 +229,7 @@
           <dynamicDescription xmi:type="expression:Expression" xmi:id="_l35GsWs1EfGfqcq0fL0KUg" name="" content="" returnTypeFixed="true"/>
           <stepSummary xmi:type="expression:Expression" xmi:id="_l35Gs2s1EfGfqcq0fL0KUg" name="" content="" returnTypeFixed="true"/>
           <operations xmi:type="expression:Operation" xmi:id="_5yoOUG88EfGWI56F-xELRg">
-            <leftOperand xmi:type="expression:Expression" xmi:id="_5yoOUW88EfGWI56F-xELRg" name="solicitud" content="solicitud" type="TYPE_VARIABLE" returnType="com.company.model.Solicitud">
-              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_5yoOUm88EfGWI56F-xELRg" name="solicitud" dataType="_LIIKZGszEfGfqcq0fL0KUg" className="com.company.model.Solicitud"/>
-            </leftOperand>
+            <leftOperand xmi:type="expression:Expression" xmi:id="_5yoOUW88EfGWI56F-xELRg" name="" content=""/>
             <rightOperand xmi:type="expression:Expression" xmi:id="_5yoOU288EfGWI56F-xELRg" name="solicitudInput.distrito" content="solicitudInput?.distrito" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT">
               <referencedElements xmi:type="process:ContractInput" xmi:id="_5yoOVG88EfGWI56F-xELRg" name="solicitudInput" type="COMPLEX" createMode="false"/>
             </rightOperand>
@@ -260,9 +238,7 @@
             </operator>
           </operations>
           <operations xmi:type="expression:Operation" xmi:id="_5yoOVm88EfGWI56F-xELRg">
-            <leftOperand xmi:type="expression:Expression" xmi:id="_5yoOV288EfGWI56F-xELRg" name="solicitud" content="solicitud" type="TYPE_VARIABLE" returnType="com.company.model.Solicitud">
-              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_5yoOWG88EfGWI56F-xELRg" name="solicitud" dataType="_LIIKZGszEfGfqcq0fL0KUg" className="com.company.model.Solicitud"/>
-            </leftOperand>
+            <leftOperand xmi:type="expression:Expression" xmi:id="_5yoOV288EfGWI56F-xELRg" name="" content=""/>
             <rightOperand xmi:type="expression:Expression" xmi:id="_5yoOWW88EfGWI56F-xELRg" name="solicitudInput.fecha" content="solicitudInput?.fecha" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.time.LocalDate">
               <referencedElements xmi:type="process:ContractInput" xmi:id="_5yoOWm88EfGWI56F-xELRg" name="solicitudInput" type="COMPLEX" createMode="false"/>
             </rightOperand>
@@ -271,9 +247,7 @@
             </operator>
           </operations>
           <operations xmi:type="expression:Operation" xmi:id="_gjFnRG89EfGWI56F-xELRg">
-            <leftOperand xmi:type="expression:Expression" xmi:id="_gjFnRW89EfGWI56F-xELRg" name="campaign_report" content="campaign_report" type="TYPE_VARIABLE" returnType="com.company.model.ReporteCampaign">
-              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_gjFnRm89EfGWI56F-xELRg" name="campaign_report" dataType="_LIIKZGszEfGfqcq0fL0KUg" className="com.company.model.ReporteCampaign"/>
-            </leftOperand>
+            <leftOperand xmi:type="expression:Expression" xmi:id="_gjFnRW89EfGWI56F-xELRg" name="" content=""/>
             <rightOperand xmi:type="expression:Expression" xmi:id="_gjFnR289EfGWI56F-xELRg" name="campaign_reportInput.encargado" content="campaign_reportInput?.encargado" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT">
               <referencedElements xmi:type="process:ContractInput" xmi:id="_gjFnSG89EfGWI56F-xELRg" name="campaign_reportInput" type="COMPLEX" createMode="false"/>
             </rightOperand>
@@ -282,9 +256,7 @@
             </operator>
           </operations>
           <operations xmi:type="expression:Operation" xmi:id="_gjFnSm89EfGWI56F-xELRg">
-            <leftOperand xmi:type="expression:Expression" xmi:id="_gjFnS289EfGWI56F-xELRg" name="campaign_report" content="campaign_report" type="TYPE_VARIABLE" returnType="com.company.model.ReporteCampaign">
-              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_gjFnTG89EfGWI56F-xELRg" name="campaign_report" dataType="_LIIKZGszEfGfqcq0fL0KUg" className="com.company.model.ReporteCampaign"/>
-            </leftOperand>
+            <leftOperand xmi:type="expression:Expression" xmi:id="_gjFnS289EfGWI56F-xELRg" name="" content=""/>
             <rightOperand xmi:type="expression:Expression" xmi:id="_gjFnTW89EfGWI56F-xELRg" name="campaign_reportInput.hora_Inicio" content="campaign_reportInput?.hora_Inicio" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.time.LocalDateTime">
               <referencedElements xmi:type="process:ContractInput" xmi:id="_gjFnTm89EfGWI56F-xELRg" name="campaign_reportInput" type="COMPLEX" createMode="false"/>
             </rightOperand>
@@ -293,9 +265,7 @@
             </operator>
           </operations>
           <operations xmi:type="expression:Operation" xmi:id="_gjFnUG89EfGWI56F-xELRg">
-            <leftOperand xmi:type="expression:Expression" xmi:id="_gjFnUW89EfGWI56F-xELRg" name="campaign_report" content="campaign_report" type="TYPE_VARIABLE" returnType="com.company.model.ReporteCampaign">
-              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_gjFnUm89EfGWI56F-xELRg" name="campaign_report" dataType="_LIIKZGszEfGfqcq0fL0KUg" className="com.company.model.ReporteCampaign"/>
-            </leftOperand>
+            <leftOperand xmi:type="expression:Expression" xmi:id="_gjFnUW89EfGWI56F-xELRg" name="" content=""/>
             <rightOperand xmi:type="expression:Expression" xmi:id="_gjFnU289EfGWI56F-xELRg" name="campaign_reportInput.hora_Final" content="campaign_reportInput?.hora_Final" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.time.LocalDateTime">
               <referencedElements xmi:type="process:ContractInput" xmi:id="_gjFnVG89EfGWI56F-xELRg" name="campaign_reportInput" type="COMPLEX" createMode="false"/>
             </rightOperand>
@@ -312,11 +282,11 @@
             <targetForm xmi:type="expression:Expression" xmi:id="_iVWPEG89EfGWI56F-xELRg" name="VacineCampaign" content="2f860c91-ced9-44d4-8e1b-09a9ed6cf486" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
           </formMapping>
           <contract xmi:type="process:Contract" xmi:id="_xMJpN2s1EfGfqcq0fL0KUg">
-            <inputs xmi:type="process:ContractInput" xmi:id="_5ynnQG88EfGWI56F-xELRg" name="solicitudInput" type="COMPLEX" dataReference="solicitud" createMode="false">
+            <inputs xmi:type="process:ContractInput" xmi:id="_5ynnQG88EfGWI56F-xELRg" name="solicitudInput" type="COMPLEX" createMode="false">
               <inputs xmi:type="process:ContractInput" xmi:id="_5ynnQW88EfGWI56F-xELRg" name="distrito" createMode="false"/>
               <inputs xmi:type="process:ContractInput" xmi:id="_5ynnQm88EfGWI56F-xELRg" name="fecha" type="LOCALDATE" createMode="false"/>
             </inputs>
-            <inputs xmi:type="process:ContractInput" xmi:id="_gjFnQG89EfGWI56F-xELRg" name="campaign_reportInput" type="COMPLEX" dataReference="campaign_report" createMode="false">
+            <inputs xmi:type="process:ContractInput" xmi:id="_gjFnQG89EfGWI56F-xELRg" name="campaign_reportInput" type="COMPLEX" createMode="false">
               <inputs xmi:type="process:ContractInput" xmi:id="_gjFnQW89EfGWI56F-xELRg" name="encargado" createMode="false"/>
               <inputs xmi:type="process:ContractInput" xmi:id="_gjFnQm89EfGWI56F-xELRg" name="hora_Inicio" type="LOCALDATETIME" createMode="false"/>
               <inputs xmi:type="process:ContractInput" xmi:id="_gjFnQ289EfGWI56F-xELRg" name="hora_Final" type="LOCALDATETIME" createMode="false"/>
@@ -329,9 +299,7 @@
           <dynamicDescription xmi:type="expression:Expression" xmi:id="_3BGqYGs1EfGfqcq0fL0KUg" name="" content="" returnTypeFixed="true"/>
           <stepSummary xmi:type="expression:Expression" xmi:id="_3BGqYms1EfGfqcq0fL0KUg" name="" content="" returnTypeFixed="true"/>
           <operations xmi:type="expression:Operation" xmi:id="_wJG54m89EfGWI56F-xELRg">
-            <leftOperand xmi:type="expression:Expression" xmi:id="_wJG54289EfGWI56F-xELRg" name="campaign_report" content="campaign_report" type="TYPE_VARIABLE" returnType="com.company.model.ReporteCampaign">
-              <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_wJG55G89EfGWI56F-xELRg" name="campaign_report" dataType="_LIIKZGszEfGfqcq0fL0KUg" className="com.company.model.ReporteCampaign"/>
-            </leftOperand>
+            <leftOperand xmi:type="expression:Expression" xmi:id="_wJG54289EfGWI56F-xELRg" name="" content=""/>
             <rightOperand xmi:type="expression:Expression" xmi:id="_wJG55W89EfGWI56F-xELRg" name="campaign_reportInput.vacunados" content="campaign_reportInput?.vacunados" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.lang.Integer">
               <referencedElements xmi:type="process:ContractInput" xmi:id="_wJG55m89EfGWI56F-xELRg" name="campaign_reportInput" type="COMPLEX" createMode="false"/>
             </rightOperand>
@@ -348,24 +316,18 @@
             <targetForm xmi:type="expression:Expression" xmi:id="_9rSsgG89EfGWI56F-xELRg" name="VacineReport" content="04016f08-ea3a-43c2-9d96-2dce5d822162" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
           </formMapping>
           <contract xmi:type="process:Contract" xmi:id="_3cgM-Gs1EfGfqcq0fL0KUg">
-            <inputs xmi:type="process:ContractInput" xmi:id="_wJG54G89EfGWI56F-xELRg" name="campaign_reportInput" type="COMPLEX" dataReference="campaign_report" createMode="false">
+            <inputs xmi:type="process:ContractInput" xmi:id="_wJG54G89EfGWI56F-xELRg" name="campaign_reportInput" type="COMPLEX" createMode="false">
               <inputs xmi:type="process:ContractInput" xmi:id="_wJG54W89EfGWI56F-xELRg" name="vacunados" type="INTEGER" createMode="false"/>
             </inputs>
-            <inputs xmi:type="process:ContractInput" xmi:id="_81QcYG89EfGWI56F-xELRg" name="solicitudInput" type="COMPLEX" dataReference="solicitud" createMode="false">
+            <inputs xmi:type="process:ContractInput" xmi:id="_81QcYG89EfGWI56F-xELRg" name="solicitudInput" type="COMPLEX" createMode="false">
               <inputs xmi:type="process:ContractInput" xmi:id="_81RDcG89EfGWI56F-xELRg" name="encargadoCampaign" createMode="false"/>
             </inputs>
           </contract>
           <expectedDuration xmi:type="expression:Expression" xmi:id="_3cgM-2s1EfGfqcq0fL0KUg" name="" content="" returnType="java.lang.Long" returnTypeFixed="true"/>
         </elements>
       </elements>
-      <data xmi:type="process:BusinessObjectData" xmi:id="_EeFXcGs3EfGfqcq0fL0KUg" name="solicitud" dataType="_LIIKZGszEfGfqcq0fL0KUg" className="com.company.model.Solicitud">
-        <defaultValue xmi:type="expression:Expression" xmi:id="_EeFXcWs3EfGfqcq0fL0KUg" name="" content="" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.lang.Object"/>
-      </data>
-      <data xmi:type="process:BusinessObjectData" xmi:id="_eS_M4G89EfGWI56F-xELRg" name="campaign_report" dataType="_LIIKZGszEfGfqcq0fL0KUg" className="com.company.model.ReporteCampaign">
-        <defaultValue xmi:type="expression:Expression" xmi:id="_eS_M4W89EfGWI56F-xELRg" name="" content="" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.lang.Object"/>
-      </data>
       <formMapping xmi:type="process:FormMapping" xmi:id="_LIHjZGszEfGfqcq0fL0KUg">
-        <targetForm xmi:type="expression:Expression" xmi:id="_hnN8sHTuEfGbi_a2C93RkQ" name="" content="" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
+        <targetForm xmi:type="expression:Expression" xmi:id="_0P25AHYxEfGPYc9TOLeMsQ" name="" content="" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
       </formMapping>
       <overviewFormMapping xmi:type="process:FormMapping" xmi:id="_LIHjZmszEfGfqcq0fL0KUg">
         <targetForm xmi:type="expression:Expression" xmi:id="_LIHjZ2szEfGfqcq0fL0KUg" name="" content="" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
@@ -429,7 +391,16 @@
       <actors xmi:type="process:Actor" xmi:id="_44GLwGs2EfGfqcq0fL0KUg" name="logistics_user" initiator="true"/>
       <actors xmi:type="process:Actor" xmi:id="_6Q-DMGs2EfGfqcq0fL0KUg" name="comms_user"/>
       <actors xmi:type="process:Actor" xmi:id="_70IfEGs2EfGfqcq0fL0KUg" name="nursing_user"/>
-      <contract xmi:type="process:Contract" xmi:id="_LIHjbGszEfGfqcq0fL0KUg"/>
+      <contract xmi:type="process:Contract" xmi:id="_LIHjbGszEfGfqcq0fL0KUg">
+        <inputs xmi:type="process:ContractInput" xmi:id="_9Y5NAHYkEfGn3tmunIRUxg" name="solicitudInput" type="COMPLEX">
+          <inputs xmi:type="process:ContractInput" xmi:id="_9Y5NAXYkEfGn3tmunIRUxg" name="distrito"/>
+          <inputs xmi:type="process:ContractInput" xmi:id="_9Y5NAnYkEfGn3tmunIRUxg" name="fecha" type="LOCALDATE"/>
+          <inputs xmi:type="process:ContractInput" xmi:id="_9Y5NA3YkEfGn3tmunIRUxg" name="qty" type="INTEGER"/>
+          <inputs xmi:type="process:ContractInput" xmi:id="_9Y5NBHYkEfGn3tmunIRUxg" name="encargadoCampaign"/>
+          <inputs xmi:type="process:ContractInput" xmi:id="_9Y5NBXYkEfGn3tmunIRUxg" name="encargadoMaterial"/>
+          <inputs xmi:type="process:ContractInput" xmi:id="_9Y5NBnYkEfGn3tmunIRUxg" name="approved" type="BOOLEAN"/>
+        </inputs>
+      </contract>
       <searchIndexes xmi:type="process:SearchIndex" xmi:id="_LIHjbWszEfGfqcq0fL0KUg">
         <name xmi:type="expression:Expression" xmi:id="_LIHjbmszEfGfqcq0fL0KUg" content="" returnTypeFixed="true"/>
         <value xmi:type="expression:Expression" xmi:id="_LIHjb2szEfGfqcq0fL0KUg" content="" returnTypeFixed="true"/>
