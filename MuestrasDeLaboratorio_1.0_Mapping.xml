@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<actormapping:actorMappings xmlns:actormapping="http://www.bonitasoft.org/ns/actormapping/6.0">
+  <actorMapping name="Usuario">
+    <groups/>
+    <memberships/>
+    <roles/>
+    <users>
+      <user>jair.torres</user>
+    </users>
+  </actorMapping>
+  <actorMapping name="TecnicoOfiSeguros">
+    <groups/>
+    <memberships/>
+    <roles/>
+    <users>
+      <user>jair.torres</user>
+    </users>
+  </actorMapping>
+  <actorMapping name="TecnicoCaja">
+    <groups/>
+    <memberships/>
+    <roles/>
+    <users>
+      <user>jair.torres</user>
+    </users>
+  </actorMapping>
+  <actorMapping name="TecnicoPatología">
+    <groups/>
+    <memberships/>
+    <roles/>
+    <users>
+      <user>nicolas.contrerin</user>
+    </users>
+  </actorMapping>
+</actormapping:actorMappings>

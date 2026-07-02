@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<actormapping:actorMappings xmlns:actormapping="http://www.bonitasoft.org/ns/actormapping/6.0">
+  <actorMapping name="Employee actor">
+    <groups/>
+    <memberships/>
+    <roles/>
+    <users>
+      <user>nicolas.contrerin</user>
+    </users>
+  </actorMapping>
+  <actorMapping name="OperadorEquipos">
+    <groups/>
+    <memberships/>
+    <roles/>
+    <users>
+      <user>nicolas.contrerin</user>
+    </users>
+  </actorMapping>
+  <actorMapping name="TecnicoEquipos">
+    <groups/>
+    <memberships/>
+    <roles/>
+    <users>
+      <user>nicolas.contrerin</user>
+    </users>
+  </actorMapping>
+</actormapping:actorMappings>
