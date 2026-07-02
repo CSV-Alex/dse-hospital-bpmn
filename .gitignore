@@ -8,5 +8,5 @@ pom.xml.versionsBackup
 node/
 node_modules/
 app\.project
-app\.settings\
-app\dependencies\
+app/.settings/
+app/dependencies/
