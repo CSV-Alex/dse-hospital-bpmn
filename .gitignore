@@ -7,3 +7,6 @@ dependency-reduced-pom.xml
 pom.xml.versionsBackup
 node/
 node_modules/
+app\.project
+app\.settings\
+app\dependencies\
