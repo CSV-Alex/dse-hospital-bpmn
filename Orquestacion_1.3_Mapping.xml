@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<actormapping:actorMappings xmlns:actormapping="http://www.bonitasoft.org/ns/actormapping/6.0">
+  <actorMapping name="Employee actor">
+    <groups/>
+    <memberships/>
+    <roles>
+      <role>member</role>
+    </roles>
+    <users>
+      <user>karla.quispe</user>
+    </users>
+  </actorMapping>
+</actormapping:actorMappings>
