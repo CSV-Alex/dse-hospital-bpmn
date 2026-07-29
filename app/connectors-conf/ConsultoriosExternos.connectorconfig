@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<connectorconfiguration:ConnectorConfiguration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:connectorconfiguration="http://www.bonitasoft.org/model/connector/configuration" xmlns:expression="http://www.bonitasoft.org/ns/bpm/expression" definitionId="rabbitmq-publish-message" version="1.0.0" name="ConsultoriosExternos" modelVersion="9">
+  <parameters key="bootstrapServers">
+    <expression xsi:type="expression:Expression" name="localhost:5672" content="localhost:5672" returnTypeFixed="true"/>
+  </parameters>
+  <parameters key="rabbitmqUsername">
+    <expression xsi:type="expression:Expression" name="guest" content="guest" returnTypeFixed="true"/>
+  </parameters>
+  <parameters key="rabbitmqPassword">
+    <expression xsi:type="expression:Expression" name="guest" content="guest" returnTypeFixed="true"/>
+  </parameters>
+  <parameters key="rabbitmqVirtualHost">
+    <expression xsi:type="expression:Expression" name="/" content="/" returnTypeFixed="true"/>
+  </parameters>
+  <parameters key="rabbitmqSsl">
+    <expression xsi:type="expression:Expression" name="false" content="false" returnType="java.lang.Boolean" returnTypeFixed="true"/>
+  </parameters>
+  <parameters key="exchange">
+    <expression xsi:type="expression:Expression" name="" content="" returnTypeFixed="true"/>
+  </parameters>
+  <parameters key="routingKey">
+    <expression xsi:type="expression:Expression" name="solicitud_consultorio" content="solicitud_consultorio" returnTypeFixed="true"/>
+  </parameters>
+  <parameters key="messageBody">
+    <expression xsi:type="expression:Expression" name="return '{&quot;numeroHistoriaClinica&quot;: &quot;' + pacienteActual.numeroHistoriaClinica + '&quot;, &quot;nombreCompleto&quot;: &quot;' + pacienteActual.nombreCompleto + '&quot;, &quot;necesitaExamen&quot;: ' + necesitaExamen + '}'" content="return '{&quot;numeroHistoriaClinica&quot;: &quot;' + pacienteActual.numeroHistoriaClinica + '&quot;, &quot;nombreCompleto&quot;: &quot;' + pacienteActual.nombreCompleto + '&quot;, &quot;necesitaExamen&quot;: ' + necesitaExamen + '}'" returnTypeFixed="true"/>
+  </parameters>
+  <parameters key="contentType">
+    <expression xsi:type="expression:Expression" name="application/json" content="application/json" returnTypeFixed="true"/>
+  </parameters>
+  <parameters key="timeoutSeconds">
+    <expression xsi:type="expression:Expression" name="30" content="30" returnType="java.lang.Integer" returnTypeFixed="true"/>
+  </parameters>
+  <parameters key="maxRetries">
+    <expression xsi:type="expression:Expression" name="3" content="3" returnType="java.lang.Integer" returnTypeFixed="true"/>
+  </parameters>
+</connectorconfiguration:ConnectorConfiguration>
