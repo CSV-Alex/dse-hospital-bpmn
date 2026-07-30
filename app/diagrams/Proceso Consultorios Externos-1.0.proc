@@ -109,7 +109,7 @@
           <iteratorExpression xmi:type="expression:Expression" xmi:id="_-X33CF_ZEfG7sakBxhduQA" name="multiInstanceIterator" content="multiInstanceIterator" type="MULTIINSTANCE_ITERATOR_TYPE" returnType="java.lang.Object" returnTypeFixed="true"/>
           <completionCondition xmi:type="expression:Expression" xmi:id="_-X33B1_ZEfG7sakBxhduQA" name="" content="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
           <formMapping xmi:type="process:FormMapping" xmi:id="_-X33Cl_ZEfG7sakBxhduQA">
-            <targetForm xmi:type="expression:Expression" xmi:id="_9Q9bQItoEfGovOBSQjsn8g" name="" content="" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
+            <targetForm xmi:type="expression:Expression" xmi:id="_tj-XoIutEfGjRN-Ot977xg" name="" content="" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
           </formMapping>
           <contract xmi:type="process:Contract" xmi:id="_-X33CV_ZEfG7sakBxhduQA">
             <inputs xmi:type="process:ContractInput" xmi:id="_GDas4GWtEfGiuZ2OVtmBrQ" name="pacienteActualInput" type="COMPLEX" dataReference="pacienteActual" createMode="false">
@@ -210,7 +210,10 @@
                 <expression xmi:type="expression:Expression" xmi:id="_9rkKHotcEfGTLbQqKvEfiA" name="solicitud_consultorio" content="solicitud_consultorio" returnTypeFixed="true"/>
               </parameters>
               <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_9rkKH4tcEfGTLbQqKvEfiA" key="messageBody">
-                <expression xmi:type="expression:Expression" xmi:id="_9rkKIItcEfGTLbQqKvEfiA" name="return '{&quot;numeroHistoriaClinica&quot;: &quot;' + pacienteActual.numeroHistoriaClinica + '&quot;, &quot;nombreCompleto&quot;: &quot;' + pacienteActual.nombreCompleto + '&quot;, &quot;necesitaExamen&quot;: ' + necesitaExamen + '}'" content="return '{&quot;numeroHistoriaClinica&quot;: &quot;' + pacienteActual.numeroHistoriaClinica + '&quot;, &quot;nombreCompleto&quot;: &quot;' + pacienteActual.nombreCompleto + '&quot;, &quot;necesitaExamen&quot;: ' + necesitaExamen + '}'" returnTypeFixed="true"/>
+                <expression xmi:type="expression:Expression" xmi:id="_9rkKIItcEfGTLbQqKvEfiA" name="messageBody()" content="return '{&quot;numeroHistoriaClinica&quot;: &quot;' + pacienteActual.numeroHistoriaClinica + '&quot;, &quot;nombreCompleto&quot;: &quot;' + pacienteActual.nombreCompleto + '&quot;, &quot;fechaNacimiento&quot;: &quot;' + pacienteActual.fechaNacimiento + '&quot;, &quot;necesitaExamen&quot;: ' + necesitaExamen + '}'" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnTypeFixed="true">
+                  <referencedElements xmi:type="process:Data" xmi:id="_skbwwIuuEfGjRN-Ot977xg" name="necesitaExamen" dataType="_PJIDTF_ZEfG7sakBxhduQA"/>
+                  <referencedElements xmi:type="process:BusinessObjectData" xmi:id="_skbwwYuuEfGjRN-Ot977xg" name="pacienteActual" dataType="_PJIDVF_ZEfG7sakBxhduQA" className="com.hospital.model.Paciente"/>
+                </expression>
               </parameters>
               <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_9rkKIYtcEfGTLbQqKvEfiA" key="contentType">
                 <expression xmi:type="expression:Expression" xmi:id="_9rkKIotcEfGTLbQqKvEfiA" name="application/json" content="application/json" returnTypeFixed="true"/>
@@ -284,7 +287,7 @@
         <defaultValue xmi:type="expression:Expression" xmi:id="_-eCacWWtEfGiuZ2OVtmBrQ" name="false" content="false" returnType="java.lang.Boolean"/>
       </data>
       <formMapping xmi:type="process:FormMapping" xmi:id="_PJIDNF_ZEfG7sakBxhduQA">
-        <targetForm xmi:type="expression:Expression" xmi:id="_9Q9bQYtoEfGovOBSQjsn8g" name="" content="" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
+        <targetForm xmi:type="expression:Expression" xmi:id="_tj-XoYutEfGjRN-Ot977xg" name="" content="" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
       </formMapping>
       <overviewFormMapping xmi:type="process:FormMapping" xmi:id="_PJIDNl_ZEfG7sakBxhduQA">
         <targetForm xmi:type="expression:Expression" xmi:id="_PJIDN1_ZEfG7sakBxhduQA" name="" content="" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
