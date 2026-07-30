@@ -48,6 +48,17 @@ Se ha implementado una Living Application en Bonitasoft (Application Page) que o
 - Escucha la cola `evento_consultorio_completado` (conector `Consume Message`) esperando respuesta (`"true"`/`"false"`).
 - Tras recibir el mensaje, una operación convierte el texto en booleano y un XOR Gateway decide el flujo siguiente.
 
+![Orquestación global](assets/orquestacion1-5.png)
+
+### 3.4 Proceso de Mantenimiento Biomédico
+- Reportar falla (Tarea humana — Operador): captura descripción del equipo dañado.
+- Evaluar equipo (Tarea humana — Técnico de Mantenimiento): determina si la falla es reparable.
+- Decisión automática: según `isRepairable` se decide reparar o dar de baja.
+- Reparar equipo (Tarea humana — Técnico de Mantenimiento): ejecuta la reparación y registra si fue exitosa.
+- Actualizar reporte (Tarea automática): envía los datos actualizados del reporte a Django vía RabbitMQ.
+
+![Proceso Mantenimiento Biomédico](assets/proceso-mantenimiento.png)
+
 ---
 
 ## 4. Elementos BPMN utilizados
@@ -71,6 +82,7 @@ Se ha implementado una Living Application en Bonitasoft (Application Page) que o
 - UI Forms: formularios HTML5 para reportar falla, evaluar equipo y actualizar reporte.
 - Tareas automáticas: envío de datos a Django (RabbitMQ) y actualización de reportes.
 - Eventos: consumo de mensajes desde la cola mantenimiento_reporte.
+- Uso del objeto `ReporteFalla`: almacena la descripción de la falla (`descripcion_falla`), si el equipo es reparable (`isRepairable`) y si la reparación fue exitosa (`repairSuccessful`). Este objeto se actualiza a lo largo del flujo desde que se reporta el incidente hasta que se completa la reparación.
 
 ---
 
@@ -155,6 +167,7 @@ Pasos:
   - `main` (producción)
   - `development` (integración / versión oficial entregable)
   - `feature/integracion-rabbitmq-consultorios` (desarrollo de integración asíncrona)
+  - `feature/reparacionEquipos-rabbitmq` (desarrollo de mantenimiento biomédico con RabbitMQ)
 - Gestión ágil: tablero Kanban con columnas Backlog / To Do / In Progress / Review / Done y checklists por tarea (ejemplo: "Configurar colas RabbitMQ", "Conectar Publish/Consume", "Solucionar asignación booleana").
 
 ---
