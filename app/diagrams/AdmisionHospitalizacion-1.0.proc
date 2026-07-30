@@ -177,7 +177,7 @@
           <iteratorExpression xmi:type="expression:Expression" xmi:id="_jXZkYWAHEfGcMbyP-06ryQ" name="multiInstanceIterator" content="multiInstanceIterator" type="MULTIINSTANCE_ITERATOR_TYPE" returnType="java.lang.Object" returnTypeFixed="true"/>
           <completionCondition xmi:type="expression:Expression" xmi:id="_jXZkYGAHEfGcMbyP-06ryQ" name="" content="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
           <formMapping xmi:type="process:FormMapping" xmi:id="_jXZkY2AHEfGcMbyP-06ryQ">
-            <targetForm xmi:type="expression:Expression" xmi:id="_5-pEtGWyEfGwp_u9g6IG-Q" name="newForm" content="3846bf7a-187d-46ef-8613-cb682202d0d3" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
+            <targetForm xmi:type="expression:Expression" xmi:id="_5-pEtGWyEfGwp_u9g6IG-Q" name="newForm" content="d47e945a-a268-469a-9254-93e86b6e0520" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
           </formMapping>
           <contract xmi:type="process:Contract" xmi:id="_jXZkYmAHEfGcMbyP-06ryQ"/>
           <expectedDuration xmi:type="expression:Expression" xmi:id="_jXZkZWAHEfGcMbyP-06ryQ" name="" content="" returnType="java.lang.Long" returnTypeFixed="true"/>
@@ -216,7 +216,7 @@
           <iteratorExpression xmi:type="expression:Expression" xmi:id="_jXtGaGAHEfGcMbyP-06ryQ" name="multiInstanceIterator" content="multiInstanceIterator" type="MULTIINSTANCE_ITERATOR_TYPE" returnType="java.lang.Object" returnTypeFixed="true"/>
           <completionCondition xmi:type="expression:Expression" xmi:id="_jXtGZ2AHEfGcMbyP-06ryQ" name="" content="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
           <formMapping xmi:type="process:FormMapping" xmi:id="_jXtGamAHEfGcMbyP-06ryQ">
-            <targetForm xmi:type="expression:Expression" xmi:id="_5-pEtmWyEfGwp_u9g6IG-Q" name="newForm" content="3846bf7a-187d-46ef-8613-cb682202d0d3" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
+            <targetForm xmi:type="expression:Expression" xmi:id="_5-pEtmWyEfGwp_u9g6IG-Q" name="newForm1" content="7736e001-45fe-47c8-91e6-acd92d8895d5" type="FORM_REFERENCE_TYPE" returnTypeFixed="true"/>
           </formMapping>
           <contract xmi:type="process:Contract" xmi:id="_jXtGaWAHEfGcMbyP-06ryQ"/>
           <expectedDuration xmi:type="expression:Expression" xmi:id="_jXtGbGAHEfGcMbyP-06ryQ" name="" content="" returnType="java.lang.Long" returnTypeFixed="true"/>
@@ -394,10 +394,10 @@
           <completionCondition xmi:type="expression:Expression" xmi:id="_18jsZ4wfEfGmMqDAR9OwHA" name="" content="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
         </elements>
       </elements>
-      <data xmi:type="process:BusinessObjectData" xmi:id="_pifgQGiwEfGPqc2VPeDvjw" name="paciente" dataType="_jVm0qGAHEfGcMbyP-06ryQ" className="com.company.model.Paciente">
-        <defaultValue xmi:type="expression:Expression" xmi:id="_pifgQWiwEfGPqc2VPeDvjw" name="init_paciente()" content="def nuevoPaciente = new com.company.model.Paciente()&#xD;&#xA;&#xD;&#xA;// Mapeamos el dato que viene del formulario (dniPaciente) al atributo de la BD (dni)&#xD;&#xA;nuevoPaciente.dni = dniPaciente&#xD;&#xA;&#xD;&#xA;return nuevoPaciente" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="com.company.model.Paciente">
-          <referencedElements xmi:type="process:ContractInput" xmi:id="_fapVcGjPEfGsF4eDmptGKw" name="dniPaciente">
-            <mapping xmi:type="process:ContractInputMapping" xmi:id="_fapVcWjPEfGsF4eDmptGKw"/>
+      <data xmi:type="process:BusinessObjectData" xmi:id="_pifgQGiwEfGPqc2VPeDvjw" name="paciente" dataType="_jVm0qGAHEfGcMbyP-06ryQ" className="com.company.model.Paciente2">
+        <defaultValue xmi:type="expression:Expression" xmi:id="_pifgQWiwEfGPqc2VPeDvjw" name="init_paciente()" content="def nuevoPaciente = new com.company.model.Paciente2()&#xD;&#xA;nuevoPaciente.dni = dniPaciente&#xD;&#xA;return nuevoPaciente" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="com.company.model.Paciente2">
+          <referencedElements xmi:type="process:ContractInput" xmi:id="__KfakIwqEfGmMqDAR9OwHA" name="dniPaciente">
+            <mapping xmi:type="process:ContractInputMapping" xmi:id="__KfakYwqEfGmMqDAR9OwHA"/>
           </referencedElements>
         </defaultValue>
       </data>
