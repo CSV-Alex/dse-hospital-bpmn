@@ -71,6 +71,12 @@
           <data xmi:type="process:Data" xmi:id="_wF_gsItmEfGovOBSQjsn8g" name="ejecutarLaboratorio" dataType="_i9iE3YtgEfGovOBSQjsn8g">
             <defaultValue xmi:type="expression:Expression" xmi:id="_wF_gsYtmEfGovOBSQjsn8g" content="" returnType="java.lang.Boolean"/>
           </data>
+          <data xmi:type="process:Data" xmi:id="_7d-loIuzEfGffc7MXzbNjA" name="mensajeRecibidoTexto" multiple="true" dataType="_i9iE4otgEfGovOBSQjsn8g">
+            <defaultValue xmi:type="expression:Expression" xmi:id="_7d-loYuzEfGffc7MXzbNjA" content="" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.util.List"/>
+          </data>
+          <data xmi:type="process:JavaObjectData" xmi:id="_SmWnsIu6EfGiKezVHQ4FEA" name="listaMensajes" multiple="true" dataType="_i9iE44tgEfGovOBSQjsn8g" className="java.util.List">
+            <defaultValue xmi:type="expression:Expression" xmi:id="_SmWnsYu6EfGiKezVHQ4FEA" content="" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.util.List"/>
+          </data>
           <connectors xmi:type="process:Connector" xmi:id="_dakVoIthEfGovOBSQjsn8g" name="EsperarDatos" definitionId="rabbitmq-consume-message" event="ON_ENTER" definitionVersion="1.0.0">
             <configuration xmi:type="connectorconfiguration:ConnectorConfiguration" xmi:id="_dakVoYthEfGovOBSQjsn8g" definitionId="rabbitmq-consume-message" version="1.0.0" modelVersion="9">
               <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_dakVoothEfGovOBSQjsn8g" key="bootstrapServers">
@@ -92,7 +98,7 @@
                 <expression xmi:type="expression:Expression" xmi:id="_dakVrYthEfGovOBSQjsn8g" name="evento_consultorio_completado" content="evento_consultorio_completado" returnTypeFixed="true"/>
               </parameters>
               <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_dakVrothEfGovOBSQjsn8g" key="autoAck">
-                <expression xmi:type="expression:Expression" xmi:id="_dakVr4thEfGovOBSQjsn8g" name="true" content="true" returnType="java.lang.Boolean"/>
+                <expression xmi:type="expression:Expression" xmi:id="_dakVr4thEfGovOBSQjsn8g" name="true" content="true" returnType="java.lang.Boolean" returnTypeFixed="true"/>
               </parameters>
               <parameters xmi:type="connectorconfiguration:ConnectorParameter" xmi:id="_dakVsIthEfGovOBSQjsn8g" key="timeoutSeconds">
                 <expression xmi:type="expression:Expression" xmi:id="_dakVsYthEfGovOBSQjsn8g" name="30" content="30" returnType="java.lang.Integer" returnTypeFixed="true"/>
@@ -101,47 +107,23 @@
                 <expression xmi:type="expression:Expression" xmi:id="_dakVs4thEfGovOBSQjsn8g" name="3" content="3" returnType="java.lang.Integer" returnTypeFixed="true"/>
               </parameters>
             </configuration>
-            <outputs xmi:type="expression:Operation" xmi:id="_dakVtIthEfGovOBSQjsn8g">
-              <leftOperand xmi:type="expression:Expression" xmi:id="_dakVtYthEfGovOBSQjsn8g"/>
-              <rightOperand xmi:type="expression:Expression" xmi:id="_dakVtothEfGovOBSQjsn8g" name="success" content="success" type="CONNECTOR_OUTPUT_TYPE" returnType="java.lang.Boolean">
-                <referencedElements xmi:type="definition:Output" xmi:id="_dakVt4thEfGovOBSQjsn8g" name="success" type="java.lang.Boolean"/>
+            <outputs xmi:type="expression:Operation" xmi:id="_1EL_wIu4EfGuv8h-i297jQ">
+              <leftOperand xmi:type="expression:Expression" xmi:id="_1EL_wYu4EfGuv8h-i297jQ" name="mensajeRecibidoTexto" content="mensajeRecibidoTexto" type="TYPE_VARIABLE" returnType="java.util.List">
+                <referencedElements xmi:type="process:Data" xmi:id="_1EL_wou4EfGuv8h-i297jQ" name="mensajeRecibidoTexto" multiple="true" dataType="_i9iE4otgEfGovOBSQjsn8g"/>
+              </leftOperand>
+              <rightOperand xmi:type="expression:Expression" xmi:id="_1EL_w4u4EfGuv8h-i297jQ" name="newScript()" content="messagesJson" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.util.List">
+                <referencedElements xmi:type="definition:Output" xmi:id="_oWX-cIu6EfGiKezVHQ4FEA" name="messagesJson" type="java.lang.String"/>
               </rightOperand>
-              <operator xmi:type="expression:Operator" xmi:id="_dakVuIthEfGovOBSQjsn8g" type="ASSIGNMENT"/>
-            </outputs>
-            <outputs xmi:type="expression:Operation" xmi:id="_dakVuYthEfGovOBSQjsn8g">
-              <leftOperand xmi:type="expression:Expression" xmi:id="_dakVuothEfGovOBSQjsn8g"/>
-              <rightOperand xmi:type="expression:Expression" xmi:id="_dakVu4thEfGovOBSQjsn8g" name="errorMessage" content="errorMessage" type="CONNECTOR_OUTPUT_TYPE">
-                <referencedElements xmi:type="definition:Output" xmi:id="_dakVvIthEfGovOBSQjsn8g" name="errorMessage" type="java.lang.String"/>
-              </rightOperand>
-              <operator xmi:type="expression:Operator" xmi:id="_dakVvYthEfGovOBSQjsn8g" type="ASSIGNMENT"/>
-            </outputs>
-            <outputs xmi:type="expression:Operation" xmi:id="_dakVvothEfGovOBSQjsn8g">
-              <leftOperand xmi:type="expression:Expression" xmi:id="_dakVv4thEfGovOBSQjsn8g"/>
-              <rightOperand xmi:type="expression:Expression" xmi:id="_dakVwIthEfGovOBSQjsn8g" name="messageCount" content="messageCount" type="CONNECTOR_OUTPUT_TYPE" returnType="java.lang.Integer">
-                <referencedElements xmi:type="definition:Output" xmi:id="_dakVwYthEfGovOBSQjsn8g" name="messageCount" type="java.lang.Integer"/>
-              </rightOperand>
-              <operator xmi:type="expression:Operator" xmi:id="_dakVwothEfGovOBSQjsn8g" type="ASSIGNMENT"/>
-            </outputs>
-            <outputs xmi:type="expression:Operation" xmi:id="_dakVw4thEfGovOBSQjsn8g">
-              <leftOperand xmi:type="expression:Expression" xmi:id="_dakVxIthEfGovOBSQjsn8g"/>
-              <rightOperand xmi:type="expression:Expression" xmi:id="_dakVxYthEfGovOBSQjsn8g" name="messagesJson" content="messagesJson" type="CONNECTOR_OUTPUT_TYPE">
-                <referencedElements xmi:type="definition:Output" xmi:id="_dakVxothEfGovOBSQjsn8g" name="messagesJson" type="java.lang.String"/>
-              </rightOperand>
-              <operator xmi:type="expression:Operator" xmi:id="_dakVx4thEfGovOBSQjsn8g" type="ASSIGNMENT"/>
-            </outputs>
-            <outputs xmi:type="expression:Operation" xmi:id="_dakVyIthEfGovOBSQjsn8g">
-              <leftOperand xmi:type="expression:Expression" xmi:id="_dakVyYthEfGovOBSQjsn8g"/>
-              <rightOperand xmi:type="expression:Expression" xmi:id="_dakVyothEfGovOBSQjsn8g" name="source" content="source" type="CONNECTOR_OUTPUT_TYPE">
-                <referencedElements xmi:type="definition:Output" xmi:id="_dakVy4thEfGovOBSQjsn8g" name="source" type="java.lang.String"/>
-              </rightOperand>
-              <operator xmi:type="expression:Operator" xmi:id="_dakVzIthEfGovOBSQjsn8g" type="ASSIGNMENT"/>
+              <operator xmi:type="expression:Operator" xmi:id="_1EL_xYu4EfGuv8h-i297jQ" type="ASSIGNMENT"/>
             </outputs>
           </connectors>
           <operations xmi:type="expression:Operation" xmi:id="_B6-3MItlEfGovOBSQjsn8g">
             <leftOperand xmi:type="expression:Expression" xmi:id="_B6-3MYtlEfGovOBSQjsn8g" name="ejecutarLaboratorio" content="ejecutarLaboratorio" type="TYPE_VARIABLE" returnType="java.lang.Boolean">
               <referencedElements xmi:type="process:Data" xmi:id="_wGf3AItmEfGovOBSQjsn8g" name="ejecutarLaboratorio" dataType="_i9iE3YtgEfGovOBSQjsn8g"/>
             </leftOperand>
-            <rightOperand xmi:type="expression:Expression" xmi:id="_B6-3MotlEfGovOBSQjsn8g" name="necesitaLaboratorio()" content="Boolean.valueOf(messagesJson[0])" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.lang.Boolean"/>
+            <rightOperand xmi:type="expression:Expression" xmi:id="_B6-3MotlEfGovOBSQjsn8g" name="necesitaLaboratorio()" content="Boolean.valueOf(mensajeRecibidoTexto[0])" interpreter="GROOVY" type="TYPE_READ_ONLY_SCRIPT" returnType="java.lang.Boolean">
+              <referencedElements xmi:type="process:Data" xmi:id="_sBqkcIu6EfGiKezVHQ4FEA" name="mensajeRecibidoTexto" multiple="true" dataType="_i9iE4otgEfGovOBSQjsn8g"/>
+            </rightOperand>
             <operator xmi:type="expression:Operator" xmi:id="_B6-3M4tlEfGovOBSQjsn8g" type="ASSIGNMENT"/>
           </operations>
           <loopCondition xmi:type="expression:Expression" xmi:id="_i9iEs4tgEfGovOBSQjsn8g" name="" content="" returnType="java.lang.Boolean" returnTypeFixed="true"/>
