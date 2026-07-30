@@ -44,13 +44,26 @@ Se ha implementado una Living Application en Bonitasoft (Application Page) que o
 ---
 
 ## 4. Elementos BPMN utilizados
-- Modelo de Datos (BDM): `Paciente`, `Cita`, `Triaje`, `HistoriaClinica`, `PeticionPrueba`.
-- Contratos: cada tarea humana tiene contrato (ej. `PacienteInput` con nombre, fecha de nacimiento, etc.).
-- Roles: `Enfermería`, `Médico Especialista`, `Sistema de Información`.
+
+### Consultorio Externo
+- Modelo de Datos (BDM): Paciente, Cita, Triaje, HistoriaClinica, PeticionPrueba.
+- Contratos: cada tarea humana tiene contrato (ej. PacienteInput con nombre, fecha de nacimiento, etc.).
+- Roles: Enfermería, Médico Especialista, Sistema de Información.
 - UI Forms: formularios HTML5 personalizados por tarea.
 - Tareas automáticas: validaciones internas y conectores con el broker.
 - Eventos: publicación/consumo de mensajes con RabbitMQ.
-- Subprocesos y `CallActivity`
+- Subprocesos y CallActivity: invocación a MuestrasDeLaboratorio.
+
+### Mantenimiento Biomédico
+- Modelo de Datos (BDM):
+  - descripcion_falla (string) — descripción del incidente reportado.
+  - isRepairable (booleano) — indica si el equipo requiere reparación.
+  - repairSuccessful (booleano) — indica si la reparación fue exitosa.
+- Contratos: ReporteFallaInput con descripcion_falla, equipo_id, external_id.
+- Roles: Operador, Técnico de Mantenimiento, Sistema de Información.
+- UI Forms: formularios HTML5 para reportar falla, evaluar equipo y actualizar reporte.
+- Tareas automáticas: envío de datos a Django (RabbitMQ) y actualización de reportes.
+- Eventos: consumo de mensajes desde la cola mantenimiento_reporte.
 
 ---
 
