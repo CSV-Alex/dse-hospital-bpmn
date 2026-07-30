@@ -52,6 +52,13 @@ Se ha implementado una Living Application en Bonitasoft (Application Page) que o
 
 ![Proceso Mantenimiento Biomédico](assets/proceso-mantenimiento.png)
 
+### 3.4 Proceso: Admisión y Hospitalización
+- Recepción y Validación: Recepción de orden de internamiento y verificación de disponibilidad de camas (Admisión).
+- Facturación / Seguros: Validación de cobertura financiera (SIS).
+- Enfermería: Preparación de cama, traslado de paciente y registro de signos vitales.
+- Área Médica: Apertura de Historia Clínica y emisión de plan médico.
+- Registro final: Tareas automáticas de integración (RabbitMQ) para registrar la hospitalización en el backend y esperar confirmación asíncrona.
+
 ---
 
 ## 4. Elementos BPMN utilizados
