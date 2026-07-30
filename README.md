@@ -35,7 +35,14 @@ Se ha implementado una Living Application en Bonitasoft (Application Page) que o
 - En caso de requerir exámenes, se invoca el subproceso `MuestrasDeLaboratorio`.
 - Registro final: `Registrar Historia Clínica en el sistema` (Tarea automática que publica mensaje en RabbitMQ).
 
-### 3.2 Orquestador global (arquitectura guiada por eventos)
+### 3.2 Proceso: Admisión y Hospitalización
+- **Recepción y Validación:** Recepción de orden de internamiento y verificación de disponibilidad de camas (Admisión).
+- **Facturación / Seguros:** Validación de cobertura financiera (SIS).
+- **Enfermería:** Preparación de cama, traslado de paciente y registro de signos vitales.
+- **Área Médica:** Apertura de Historia Clínica y emisión de plan médico.
+- **Registro final:** Tareas automáticas de integración (RabbitMQ) para registrar la hospitalización en el backend y esperar confirmación asíncrona.
+
+### 3.3 Orquestador global (arquitectura guiada por eventos)
 - Orquestador inicia `Proceso Consultorio` vía `Call Activity`.
 - Publica en la cola `solicitud_consultorio` para que el backend (Django) lo consuma.
 - Escucha la cola `evento_consultorio_completado` (conector `Consume Message`) esperando respuesta (`"true"`/`"false"`).
