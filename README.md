@@ -9,8 +9,13 @@ Repositorio Backend: [HospitalDjangoAPI](https://github.com/CSV-Alex/HospitalDja
 ## 1. Equipo y contexto
 - Equipo: HospitalLINK
 - Integrantes:
-  - Alex Enrique Cañapataña Vargas
-  - Berly Miuler Dueñas Mandamientos
+  - Alex Enrique Cañapataña Vargas (Contribuyente principal P3)
+  - Berly Miuler Dueñas Mandamientos (Contribuyente principal P3)
+  - Jose Rodrigo Cari Almiron
+  - Alexander R. Huayhua Perez
+  - Ivan Alexander Lopez Zegarra
+  - Jafet Joel Poco Chire
+
 
 - Cliente: Hospital Regional Honorio Delgado
 - Propósito: Automatizar el flujo de atención ambulatoria en consultorios externos, orquestando desde la llegada del paciente, su registro, evaluación hasta la posible derivación a laboratorio. La orquestación y la integración con servicios back-end se realizan de forma asíncrona mediante RabbitMQ.
@@ -43,7 +48,7 @@ Se ha implementado una Living Application en Bonitasoft (Application Page) que o
 
 ![Orquestación global](assets/orquestacion1-5.png)
 
-### 3.3 Proceso de Mantenimiento Biomédico
+### 3.3 Proceso de Mantenimiento  de equipos biomédicos
 - Reportar falla (Tarea humana — Operador): captura descripción del equipo dañado.
 - Evaluar equipo (Tarea humana — Técnico de Mantenimiento): determina si la falla es reparable.
 - Decisión automática: según `isRepairable` se decide reparar o dar de baja.
@@ -59,6 +64,40 @@ Se ha implementado una Living Application en Bonitasoft (Application Page) que o
 - Área Médica: Apertura de Historia Clínica y emisión de plan médico.
 - Registro final: Tareas automáticas de integración (RabbitMQ) para registrar la hospitalización en el backend y esperar confirmación asíncrona.
 
+![Proceso Admisión y Hospitalizacion](assets/admision_bpm.PNG)
+
+### 3.5 Proceso: Campaña de vacunación
+- Recepción y Validación: Recepción de los detalles de fechas propuestas y area de vacunación.
+- Aprobación de propuesta: Se aprueba la propuesta o se hacen modificaciones hasta que se verfique.
+- Distribución de tareas:
+  - Logistica: Asignar materiales y vacunas para la campaña 
+  - Comunicaciones: Hacer difusión de la campaña por los canales correspondientes.
+  - Enfermeria: Asignar responsable de la campaña y personal de soporte
+- Realización de campaña: Registro manual de vacunados, hora de campaña y responsable.
+- Reporte final: Reporte de población vacunada e inventario usado, devolución de materiales al area logistica y fin del proceso.
+
+![Proceso Campaña de vacunación](assets/vacunacion_bpm.PNG)
+### 3.6 Proceso: Muestras de laboratorio
+- Recepción y Validación: La oficina de seguros verifica la validez del SIS del paciente.
+- Recepcion del departamento de patologia: Se determina la tarifa de los laboratorios.
+- Oficina de pagos: Verifica que el pago se haya realizado.
+- Dpto de Patologia: verificación de la orden y toma de la muestra, evaluación de la muestra.
+- Dpto de Patologia: entra en un `XOR`. Si la muestra es valida, se procede al estudio, el registro de resultados y su entrega.
+
+
+![Proceso Muestras de laboratorio](assets/laboratorio_bpm.PNG)
+
+### 3.7 Proceso: Dispensación Farmaceutica
+- Admisión: Registra la llegada.
+- Admisión: Verifica la identidad del paciente.
+- Admisión: Realiza el triaje del paciente.
+- Médico Especialista: Evaluación Clinica y Diagnostico. Entra a un `XOR` para determinar si se requieren analisis adicionales.
+  - Si se requieren analisis adicionales, se espera a procesar y analizar los resultados de los analisis auxiliares.
+  - Si no, se procede a establecer el tratamiento.
+- Medico Especialista: Prescribir receta.
+- Registrar historia clinica en el sistema
+
+![Proceso Dispensación Farmaceutica](assets/dispensacion_bpm.PNG)
 ---
 
 ## 4. Elementos BPMN utilizados
